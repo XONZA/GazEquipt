@@ -42,6 +42,7 @@
 			this.panel1 = new System.Windows.Forms.Panel();
 			this.label3 = new System.Windows.Forms.Label();
 			this.dragControl1 = new GasEquipt.DragControl();
+			this.dragControl2 = new GasEquipt.DragControl();
 			((System.ComponentModel.ISupportInitialize)(this.gazmechDataSet)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.loginBindingSource)).BeginInit();
 			this.panel1.SuspendLayout();
@@ -154,6 +155,10 @@
 			// 
 			this.dragControl1.SelectControl = this.panel1;
 			// 
+			// dragControl2
+			// 
+			this.dragControl2.SelectControl = this.label3;
+			// 
 			// Auntth
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -196,5 +201,6 @@
 		private System.Windows.Forms.Panel panel1;
 		private System.Windows.Forms.Label label3;
 		private DragControl dragControl1;
+		private DragControl dragControl2;
 	}
 }
