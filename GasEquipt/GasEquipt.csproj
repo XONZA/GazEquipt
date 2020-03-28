@@ -63,6 +63,18 @@
     <Compile Include="DragControl.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="EquiptAdd.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EquiptAdd.Designer.cs">
+      <DependentUpon>EquiptAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EquiptMain.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EquiptMain.Designer.cs">
+      <DependentUpon>EquiptMain.cs</DependentUpon>
+    </Compile>
     <Compile Include="gazmechDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -78,6 +90,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Auntth.resx">
       <DependentUpon>Auntth.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EquiptAdd.resx">
+      <DependentUpon>EquiptAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EquiptMain.resx">
+      <DependentUpon>EquiptMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>

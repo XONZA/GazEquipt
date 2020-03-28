@@ -20,6 +20,8 @@ namespace GasEquipt
 
 		private void Main_Load(object sender, EventArgs e)
 		{
+			// TODO: данная строка кода позволяет загрузить данные в таблицу "gazmechDataSet.gas_equipt". При необходимости она может быть перемещена или удалена.
+			this.gas_equiptTableAdapter.Fill(this.gazmechDataSet.gas_equipt);
 			Auntth au = new Auntth();
 			au.ShowDialog();
 		}
@@ -51,6 +53,24 @@ namespace GasEquipt
 		private void Button1_Click(object sender, EventArgs e)
 		{
 			Application.Exit();
+		}
+
+		private void Button2_Click(object sender, EventArgs e)
+		{
+			equiptMains1.BringToFront();
+		}
+
+		private void Gas_equiptBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+		{
+			this.Validate();
+			this.gas_equiptBindingSource.EndEdit();
+			this.tableAdapterManager.UpdateAll(this.gazmechDataSet);
+
+		}
+
+		private void Eq_add_Click(object sender, EventArgs e)
+		{
+			equiptAdd1.BringToFront();
 		}
 	}
 }
