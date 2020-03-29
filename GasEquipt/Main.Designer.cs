@@ -74,8 +74,8 @@
 			// tabPage1
 			// 
 			this.tabPage1.Controls.Add(this.panel2);
-			this.tabPage1.Controls.Add(this.equiptAdd1);
 			this.tabPage1.Controls.Add(this.equiptMains1);
+			this.tabPage1.Controls.Add(this.equiptAdd1);
 			this.tabPage1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.tabPage1.Location = new System.Drawing.Point(4, 29);
 			this.tabPage1.Name = "tabPage1";
@@ -162,19 +162,21 @@
 			// 
 			// equiptMains1
 			// 
-			this.equiptMains1.Dock = System.Windows.Forms.DockStyle.Right;
+			this.equiptMains1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.equiptMains1.Location = new System.Drawing.Point(210, 3);
 			this.equiptMains1.Margin = new System.Windows.Forms.Padding(4);
 			this.equiptMains1.Name = "equiptMains1";
-			this.equiptMains1.Size = new System.Drawing.Size(918, 655);
+			this.equiptMains1.Size = new System.Drawing.Size(921, 662);
 			this.equiptMains1.TabIndex = 2;
 			// 
 			// equiptAdd1
 			// 
-			this.equiptAdd1.Location = new System.Drawing.Point(210, 4);
+			this.equiptAdd1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.equiptAdd1.Location = new System.Drawing.Point(210, 3);
 			this.equiptAdd1.Margin = new System.Windows.Forms.Padding(4);
+			this.equiptAdd1.MaximumSize = new System.Drawing.Size(1388, 1017);
 			this.equiptAdd1.Name = "equiptAdd1";
-			this.equiptAdd1.Size = new System.Drawing.Size(925, 661);
+			this.equiptAdd1.Size = new System.Drawing.Size(925, 662);
 			this.equiptAdd1.TabIndex = 3;
 			// 
 			// tabPage2
