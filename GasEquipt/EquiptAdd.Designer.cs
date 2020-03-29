@@ -29,17 +29,9 @@
 		private void InitializeComponent()
 		{
 			this.components = new System.ComponentModel.Container();
-			this.gazmechDataSet = new GasEquipt.gazmechDataSet();
-			this.gas_equiptBindingSource = new System.Windows.Forms.BindingSource(this.components);
-			this.gas_equiptTableAdapter = new GasEquipt.gazmechDataSetTableAdapters.gas_equiptTableAdapter();
-			this.tableAdapterManager = new GasEquipt.gazmechDataSetTableAdapters.TableAdapterManager();
-			this.gas_componentTableAdapter = new GasEquipt.gazmechDataSetTableAdapters.gas_componentTableAdapter();
-			this.gas_reciptTableAdapter = new GasEquipt.gazmechDataSetTableAdapters.gas_reciptTableAdapter();
-			this.gas_reciptBindingSource = new System.Windows.Forms.BindingSource(this.components);
 			this.eqa_name = new System.Windows.Forms.Label();
 			this.eqa_coast = new System.Windows.Forms.Label();
 			this.eqa_boxname = new System.Windows.Forms.TextBox();
-			this.gas_componentBindingSource = new System.Windows.Forms.BindingSource(this.components);
 			this.gas_componentDataGridView = new System.Windows.Forms.DataGridView();
 			this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
 			this.label1 = new System.Windows.Forms.Label();
@@ -53,52 +45,21 @@
 			this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.gas_componentBindingSource = new System.Windows.Forms.BindingSource(this.components);
+			this.gazmechDataSet = new GasEquipt.gazmechDataSet();
+			this.gas_equiptBindingSource = new System.Windows.Forms.BindingSource(this.components);
+			this.gas_equiptTableAdapter = new GasEquipt.gazmechDataSetTableAdapters.gas_equiptTableAdapter();
+			this.tableAdapterManager = new GasEquipt.gazmechDataSetTableAdapters.TableAdapterManager();
+			this.gas_componentTableAdapter = new GasEquipt.gazmechDataSetTableAdapters.gas_componentTableAdapter();
+			this.gas_reciptTableAdapter = new GasEquipt.gazmechDataSetTableAdapters.gas_reciptTableAdapter();
+			this.gas_reciptBindingSource = new System.Windows.Forms.BindingSource(this.components);
+			((System.ComponentModel.ISupportInitialize)(this.gas_componentDataGridView)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.gas_componentBindingSource)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.gazmechDataSet)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.gas_equiptBindingSource)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.gas_reciptBindingSource)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.gas_componentBindingSource)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.gas_componentDataGridView)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
 			this.SuspendLayout();
-			// 
-			// gazmechDataSet
-			// 
-			this.gazmechDataSet.DataSetName = "gazmechDataSet";
-			this.gazmechDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-			// 
-			// gas_equiptBindingSource
-			// 
-			this.gas_equiptBindingSource.DataMember = "gas_equipt";
-			this.gas_equiptBindingSource.DataSource = this.gazmechDataSet;
-			// 
-			// gas_equiptTableAdapter
-			// 
-			this.gas_equiptTableAdapter.ClearBeforeFill = true;
-			// 
-			// tableAdapterManager
-			// 
-			this.tableAdapterManager.assembl_gas_equiptTableAdapter = null;
-			this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-			this.tableAdapterManager.component_componyTableAdapter = null;
-			this.tableAdapterManager.gas_component_admissionTableAdapter = null;
-			this.tableAdapterManager.gas_componentTableAdapter = this.gas_componentTableAdapter;
-			this.tableAdapterManager.gas_equiptTableAdapter = this.gas_equiptTableAdapter;
-			this.tableAdapterManager.gas_reciptTableAdapter = this.gas_reciptTableAdapter;
-			this.tableAdapterManager.loginTableAdapter = null;
-			this.tableAdapterManager.UpdateOrder = GasEquipt.gazmechDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-			// 
-			// gas_componentTableAdapter
-			// 
-			this.gas_componentTableAdapter.ClearBeforeFill = true;
-			// 
-			// gas_reciptTableAdapter
-			// 
-			this.gas_reciptTableAdapter.ClearBeforeFill = true;
-			// 
-			// gas_reciptBindingSource
-			// 
-			this.gas_reciptBindingSource.DataMember = "gas_recipt";
-			this.gas_reciptBindingSource.DataSource = this.gazmechDataSet;
 			// 
 			// eqa_name
 			// 
@@ -128,11 +89,6 @@
 			this.eqa_boxname.Size = new System.Drawing.Size(253, 26);
 			this.eqa_boxname.TabIndex = 2;
 			// 
-			// gas_componentBindingSource
-			// 
-			this.gas_componentBindingSource.DataMember = "gas_component";
-			this.gas_componentBindingSource.DataSource = this.gazmechDataSet;
-			// 
 			// gas_componentDataGridView
 			// 
 			this.gas_componentDataGridView.AutoGenerateColumns = false;
@@ -144,6 +100,7 @@
             this.dataGridViewTextBoxColumn4,
             this.dataGridViewTextBoxColumn5});
 			this.gas_componentDataGridView.DataSource = this.gas_componentBindingSource;
+			this.gas_componentDataGridView.EnableHeadersVisualStyles = false;
 			this.gas_componentDataGridView.Location = new System.Drawing.Point(315, 0);
 			this.gas_componentDataGridView.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
 			this.gas_componentDataGridView.Name = "gas_componentDataGridView";
@@ -186,16 +143,16 @@
 			this.button1.Name = "button1";
 			this.button1.Size = new System.Drawing.Size(253, 35);
 			this.button1.TabIndex = 7;
-			this.button1.Text = "Указать сборку";
+			this.button1.Text = "Добавить оборудование";
 			this.button1.UseVisualStyleBackColor = true;
 			this.button1.Click += new System.EventHandler(this.Button1_Click);
 			// 
 			// button2
 			// 
-			this.button2.Location = new System.Drawing.Point(19, 559);
+			this.button2.Location = new System.Drawing.Point(4, 580);
 			this.button2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
 			this.button2.Name = "button2";
-			this.button2.Size = new System.Drawing.Size(192, 80);
+			this.button2.Size = new System.Drawing.Size(286, 80);
 			this.button2.TabIndex = 9;
 			this.button2.Text = "Сохранить";
 			this.button2.UseVisualStyleBackColor = true;
@@ -207,7 +164,7 @@
 			this.panel1.Location = new System.Drawing.Point(298, 0);
 			this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
 			this.panel1.Name = "panel1";
-			this.panel1.Size = new System.Drawing.Size(753, 703);
+			this.panel1.Size = new System.Drawing.Size(623, 665);
 			this.panel1.TabIndex = 10;
 			// 
 			// gq_coastTextBox
@@ -255,6 +212,50 @@
 			this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
 			this.dataGridViewTextBoxColumn5.Visible = false;
 			// 
+			// gas_componentBindingSource
+			// 
+			this.gas_componentBindingSource.DataMember = "gas_component";
+			this.gas_componentBindingSource.DataSource = this.gazmechDataSet;
+			// 
+			// gazmechDataSet
+			// 
+			this.gazmechDataSet.DataSetName = "gazmechDataSet";
+			this.gazmechDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+			// 
+			// gas_equiptBindingSource
+			// 
+			this.gas_equiptBindingSource.DataMember = "gas_equipt";
+			this.gas_equiptBindingSource.DataSource = this.gazmechDataSet;
+			// 
+			// gas_equiptTableAdapter
+			// 
+			this.gas_equiptTableAdapter.ClearBeforeFill = true;
+			// 
+			// tableAdapterManager
+			// 
+			this.tableAdapterManager.assembl_gas_equiptTableAdapter = null;
+			this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+			this.tableAdapterManager.component_componyTableAdapter = null;
+			this.tableAdapterManager.gas_component_admissionTableAdapter = null;
+			this.tableAdapterManager.gas_componentTableAdapter = this.gas_componentTableAdapter;
+			this.tableAdapterManager.gas_equiptTableAdapter = this.gas_equiptTableAdapter;
+			this.tableAdapterManager.gas_reciptTableAdapter = this.gas_reciptTableAdapter;
+			this.tableAdapterManager.loginTableAdapter = null;
+			this.tableAdapterManager.UpdateOrder = GasEquipt.gazmechDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+			// 
+			// gas_componentTableAdapter
+			// 
+			this.gas_componentTableAdapter.ClearBeforeFill = true;
+			// 
+			// gas_reciptTableAdapter
+			// 
+			this.gas_reciptTableAdapter.ClearBeforeFill = true;
+			// 
+			// gas_reciptBindingSource
+			// 
+			this.gas_reciptBindingSource.DataMember = "gas_recipt";
+			this.gas_reciptBindingSource.DataSource = this.gazmechDataSet;
+			// 
 			// EquiptAdd
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -274,14 +275,14 @@
 			this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
 			this.MaximumSize = new System.Drawing.Size(1388, 1017);
 			this.Name = "EquiptAdd";
-			this.Size = new System.Drawing.Size(1051, 703);
+			this.Size = new System.Drawing.Size(921, 665);
 			this.Load += new System.EventHandler(this.EquiptAdd_Load);
+			((System.ComponentModel.ISupportInitialize)(this.gas_componentDataGridView)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.gas_componentBindingSource)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.gazmechDataSet)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.gas_equiptBindingSource)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.gas_reciptBindingSource)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.gas_componentBindingSource)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.gas_componentDataGridView)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 

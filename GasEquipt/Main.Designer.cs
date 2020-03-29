@@ -38,6 +38,7 @@
 			this.eq_main = new System.Windows.Forms.Button();
 			this.equiptMains1 = new GasEquipt.EquiptMains();
 			this.equiptAdd1 = new GasEquipt.EquiptAdd();
+			this.equiptEdit1 = new GasEquipt.EquiptEdit();
 			this.tabPage2 = new System.Windows.Forms.TabPage();
 			this.tabPage3 = new System.Windows.Forms.TabPage();
 			this.tabPage4 = new System.Windows.Forms.TabPage();
@@ -76,6 +77,7 @@
 			this.tabPage1.Controls.Add(this.panel2);
 			this.tabPage1.Controls.Add(this.equiptMains1);
 			this.tabPage1.Controls.Add(this.equiptAdd1);
+			this.tabPage1.Controls.Add(this.equiptEdit1);
 			this.tabPage1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.tabPage1.Location = new System.Drawing.Point(4, 29);
 			this.tabPage1.Name = "tabPage1";
@@ -127,6 +129,7 @@
 			this.eq_edit.TabIndex = 2;
 			this.eq_edit.Text = "Редактировать оборудование";
 			this.eq_edit.UseVisualStyleBackColor = false;
+			this.eq_edit.Click += new System.EventHandler(this.Eq_edit_Click);
 			// 
 			// eq_add
 			// 
@@ -163,10 +166,10 @@
 			// equiptMains1
 			// 
 			this.equiptMains1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.equiptMains1.Location = new System.Drawing.Point(210, 3);
+			this.equiptMains1.Location = new System.Drawing.Point(210, 0);
 			this.equiptMains1.Margin = new System.Windows.Forms.Padding(4);
 			this.equiptMains1.Name = "equiptMains1";
-			this.equiptMains1.Size = new System.Drawing.Size(921, 662);
+			this.equiptMains1.Size = new System.Drawing.Size(921, 665);
 			this.equiptMains1.TabIndex = 2;
 			// 
 			// equiptAdd1
@@ -176,8 +179,17 @@
 			this.equiptAdd1.Margin = new System.Windows.Forms.Padding(4);
 			this.equiptAdd1.MaximumSize = new System.Drawing.Size(1388, 1017);
 			this.equiptAdd1.Name = "equiptAdd1";
-			this.equiptAdd1.Size = new System.Drawing.Size(925, 662);
+			this.equiptAdd1.Size = new System.Drawing.Size(921, 665);
 			this.equiptAdd1.TabIndex = 3;
+			// 
+			// equiptEdit1
+			// 
+			this.equiptEdit1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.equiptEdit1.Location = new System.Drawing.Point(210, 3);
+			this.equiptEdit1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+			this.equiptEdit1.Name = "equiptEdit1";
+			this.equiptEdit1.Size = new System.Drawing.Size(921, 665);
+			this.equiptEdit1.TabIndex = 4;
 			// 
 			// tabPage2
 			// 
@@ -325,6 +337,7 @@
 		private gazmechDataSetTableAdapters.gas_equiptTableAdapter gas_equiptTableAdapter;
 		private gazmechDataSetTableAdapters.TableAdapterManager tableAdapterManager;
 		private EquiptAdd equiptAdd1;
+		private EquiptEdit equiptEdit1;
 	}
 }
 

@@ -45,7 +45,7 @@ namespace GasEquipt
 				this.gas_equiptBindingSource.EndEdit();
 				this.gas_equiptTableAdapter.Update(this.gazmechDataSet);
 			}
-			else MessageBox.Show("Выберите строку в таблице студентов");
+			else MessageBox.Show("Выберите компонент");
 		}
 
 		private void EquiptAdd_Load(object sender, EventArgs e)

@@ -69,6 +69,12 @@
     <Compile Include="EquiptAdd.Designer.cs">
       <DependentUpon>EquiptAdd.cs</DependentUpon>
     </Compile>
+    <Compile Include="EquiptEdit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EquiptEdit.Designer.cs">
+      <DependentUpon>EquiptEdit.cs</DependentUpon>
+    </Compile>
     <Compile Include="EquiptMain.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -93,6 +99,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EquiptAdd.resx">
       <DependentUpon>EquiptAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EquiptEdit.resx">
+      <DependentUpon>EquiptEdit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EquiptMain.resx">
       <DependentUpon>EquiptMain.cs</DependentUpon>

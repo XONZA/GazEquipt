@@ -11,7 +11,7 @@
     <Shape ID="DesignTable:gas_component" ZOrder="10" X="70" Y="70" Height="156" Width="232" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="109" />
     <Shape ID="DesignTable:gas_component_admission" ZOrder="9" X="372" Y="279" Height="139" Width="297" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="92" />
     <Shape ID="DesignTable:gas_equipt" ZOrder="8" X="643" Y="488" Height="156" Width="205" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="92" />
-    <Shape ID="DesignTable:gas_recipt" ZOrder="7" X="372" Y="488" Height="139" Width="201" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="92" />
+    <Shape ID="DesignTable:gas_recipt" ZOrder="7" X="372" Y="488" Height="156" Width="218" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="92" />
     <Shape ID="DesignTable:login" ZOrder="6" X="1246" Y="70" Height="122" Width="170" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="75" />
   </Shapes>
   <Connectors>
@@ -78,7 +78,7 @@
           <Y>557</Y>
         </Point>
         <Point>
-          <X>573</X>
+          <X>590</X>
           <Y>557</Y>
         </Point>
       </RoutePoints>

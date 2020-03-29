@@ -6092,12 +6092,19 @@ namespace GasEquipt.gazmechDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::MySql.Data.MySqlClient.MySqlCommand[1];
+            this._commandCollection = new global::MySql.Data.MySqlClient.MySqlCommand[2];
             this._commandCollection[0] = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT `idgas_recipt`, `id_gas_componenta`, `id_gas_equipt`, `r_count_component` " +
                 "FROM `gas_recipt`";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::MySql.Data.MySqlClient.MySqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = @"SELECT     gas_recipt.idgas_recipt, gas_recipt.id_gas_componenta, gas_component.gc_name, gas_recipt.id_gas_equipt, gas_recipt.r_count_component, 
+                      gas_component.gc_coast
+FROM         gas_recipt INNER JOIN
+                      gas_component ON gas_recipt.id_gas_componenta = gas_component.idgas_component";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6119,6 +6126,30 @@ namespace GasEquipt.gazmechDataSetTableAdapters {
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
         public virtual gazmechDataSet.gas_reciptDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            gazmechDataSet.gas_reciptDataTable dataTable = new gazmechDataSet.gas_reciptDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillEquiptEdit(gazmechDataSet.gas_reciptDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual gazmechDataSet.gas_reciptDataTable GetDataByEquiptEdit() {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
             gazmechDataSet.gas_reciptDataTable dataTable = new gazmechDataSet.gas_reciptDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;

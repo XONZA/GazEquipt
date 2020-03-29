@@ -72,5 +72,10 @@ namespace GasEquipt
 		{
 			equiptAdd1.BringToFront();
 		}
+
+		private void Eq_edit_Click(object sender, EventArgs e)
+		{
+			equiptEdit1.BringToFront();
+		}
 	}
 }
