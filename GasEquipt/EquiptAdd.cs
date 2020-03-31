@@ -12,7 +12,8 @@ namespace GasEquipt
 {
 	public partial class EquiptAdd : UserControl
 	{
-		public int gas_idequip, coast;
+		public int gas_idequip;
+		public decimal coast;
 
 		public void AddLoad()
 		{
@@ -43,7 +44,7 @@ namespace GasEquipt
 				gas_Recipt.id_gas_equipt = gas_idequip;
 				DataGridViewRow roww = gas_componentDataGridView.CurrentRow;
 				gas_Recipt.id_gas_componenta = Convert.ToInt32(roww.Cells[0].Value);
-				coast += (Convert.ToInt32(roww.Cells[2].Value)) * (Convert.ToInt32(numericUpDown1.Value));
+				coast += Convert.ToDecimal(Convert.ToDecimal(roww.Cells[2].Value)) * (Convert.ToInt32(numericUpDown1.Value));
 				gq_coastTextBox.Text = Convert.ToString(coast);
 				gas_Recipt.r_count_component = Convert.ToInt32(numericUpDown1.Value);
 				this.gazmechDataSet.gas_recipt.Rows.Add(gas_Recipt);
