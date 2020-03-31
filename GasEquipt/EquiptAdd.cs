@@ -13,6 +13,13 @@ namespace GasEquipt
 	public partial class EquiptAdd : UserControl
 	{
 		public int gas_idequip, coast;
+
+		public void AddLoad()
+		{
+			this.gas_reciptTableAdapter.Fill(this.gazmechDataSet.gas_recipt);
+			this.gas_componentTableAdapter.Fill(this.gazmechDataSet.gas_component);
+
+		}
 		public EquiptAdd()
 		{
 			InitializeComponent();
@@ -64,12 +71,19 @@ namespace GasEquipt
 			gaseq.gq_coast = 0;
 			gaseq.gq_count = 0;
 			this.gazmechDataSet.gas_equipt.Rows.Add(gaseq);
+			this.gas_equiptBindingSource.EndEdit();
 			this.gas_equiptTableAdapter.Update(this.gazmechDataSet.gas_equipt);
 			this.gas_equiptTableAdapter.Fill(this.gazmechDataSet.gas_equipt);
 			panel1.Visible = false;
 			button1.Enabled = false;
 			this.gas_equiptTableAdapter.FillBy(this.gazmechDataSet.gas_equipt);
 			gas_idequip = gazmechDataSet.Tables["gas_equipt"].Rows[0].Field<int>("idgas_equipt");
+		}
+
+		private void EquiptAdd_VisibleChanged(object sender, EventArgs e)
+		{
+			this.gas_reciptTableAdapter.Fill(this.gazmechDataSet.gas_recipt);
+			this.gas_componentTableAdapter.Fill(this.gazmechDataSet.gas_component);
 		}
 
 		private void Button2_Click(object sender, EventArgs e)

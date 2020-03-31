@@ -36,9 +36,6 @@
 			this.eq_edit = new System.Windows.Forms.Button();
 			this.eq_add = new System.Windows.Forms.Button();
 			this.eq_main = new System.Windows.Forms.Button();
-			this.equiptMains1 = new GasEquipt.EquiptMains();
-			this.equiptAdd1 = new GasEquipt.EquiptAdd();
-			this.equiptEdit1 = new GasEquipt.EquiptEdit();
 			this.tabPage2 = new System.Windows.Forms.TabPage();
 			this.tabPage3 = new System.Windows.Forms.TabPage();
 			this.tabPage4 = new System.Windows.Forms.TabPage();
@@ -49,8 +46,12 @@
 			this.gas_equiptBindingSource = new System.Windows.Forms.BindingSource(this.components);
 			this.gas_equiptTableAdapter = new GasEquipt.gazmechDataSetTableAdapters.gas_equiptTableAdapter();
 			this.tableAdapterManager = new GasEquipt.gazmechDataSetTableAdapters.TableAdapterManager();
+			this.equiptMains1 = new GasEquipt.EquiptMains();
+			this.equiptAdd1 = new GasEquipt.EquiptAdd();
+			this.equiptEdit1 = new GasEquipt.EquiptEdit();
 			this.dragControl1 = new GasEquipt.DragControl();
 			this.dragControl2 = new GasEquipt.DragControl();
+			this.equiptPostavk1 = new GasEquipt.EquiptPostavk();
 			this.tabControl1.SuspendLayout();
 			this.tabPage1.SuspendLayout();
 			this.panel2.SuspendLayout();
@@ -74,6 +75,7 @@
 			// 
 			// tabPage1
 			// 
+			this.tabPage1.Controls.Add(this.equiptPostavk1);
 			this.tabPage1.Controls.Add(this.panel2);
 			this.tabPage1.Controls.Add(this.equiptMains1);
 			this.tabPage1.Controls.Add(this.equiptAdd1);
@@ -114,6 +116,7 @@
 			this.eq_supply.TabIndex = 3;
 			this.eq_supply.Text = "Поставка оборудования";
 			this.eq_supply.UseVisualStyleBackColor = false;
+			this.eq_supply.Click += new System.EventHandler(this.Eq_supply_Click);
 			// 
 			// eq_edit
 			// 
@@ -162,34 +165,6 @@
 			this.eq_main.Text = "Информация";
 			this.eq_main.UseVisualStyleBackColor = false;
 			this.eq_main.Click += new System.EventHandler(this.Button2_Click);
-			// 
-			// equiptMains1
-			// 
-			this.equiptMains1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.equiptMains1.Location = new System.Drawing.Point(210, 0);
-			this.equiptMains1.Margin = new System.Windows.Forms.Padding(4);
-			this.equiptMains1.Name = "equiptMains1";
-			this.equiptMains1.Size = new System.Drawing.Size(921, 665);
-			this.equiptMains1.TabIndex = 2;
-			// 
-			// equiptAdd1
-			// 
-			this.equiptAdd1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.equiptAdd1.Location = new System.Drawing.Point(210, 3);
-			this.equiptAdd1.Margin = new System.Windows.Forms.Padding(4);
-			this.equiptAdd1.MaximumSize = new System.Drawing.Size(1388, 1017);
-			this.equiptAdd1.Name = "equiptAdd1";
-			this.equiptAdd1.Size = new System.Drawing.Size(921, 665);
-			this.equiptAdd1.TabIndex = 3;
-			// 
-			// equiptEdit1
-			// 
-			this.equiptEdit1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.equiptEdit1.Location = new System.Drawing.Point(210, 3);
-			this.equiptEdit1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-			this.equiptEdit1.Name = "equiptEdit1";
-			this.equiptEdit1.Size = new System.Drawing.Size(921, 665);
-			this.equiptEdit1.TabIndex = 4;
 			// 
 			// tabPage2
 			// 
@@ -284,6 +259,34 @@
 			this.tableAdapterManager.loginTableAdapter = null;
 			this.tableAdapterManager.UpdateOrder = GasEquipt.gazmechDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
 			// 
+			// equiptMains1
+			// 
+			this.equiptMains1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.equiptMains1.Location = new System.Drawing.Point(210, 0);
+			this.equiptMains1.Margin = new System.Windows.Forms.Padding(4);
+			this.equiptMains1.Name = "equiptMains1";
+			this.equiptMains1.Size = new System.Drawing.Size(921, 665);
+			this.equiptMains1.TabIndex = 2;
+			// 
+			// equiptAdd1
+			// 
+			this.equiptAdd1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.equiptAdd1.Location = new System.Drawing.Point(210, 3);
+			this.equiptAdd1.Margin = new System.Windows.Forms.Padding(4);
+			this.equiptAdd1.MaximumSize = new System.Drawing.Size(1388, 1017);
+			this.equiptAdd1.Name = "equiptAdd1";
+			this.equiptAdd1.Size = new System.Drawing.Size(921, 665);
+			this.equiptAdd1.TabIndex = 3;
+			// 
+			// equiptEdit1
+			// 
+			this.equiptEdit1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.equiptEdit1.Location = new System.Drawing.Point(210, 3);
+			this.equiptEdit1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+			this.equiptEdit1.Name = "equiptEdit1";
+			this.equiptEdit1.Size = new System.Drawing.Size(921, 665);
+			this.equiptEdit1.TabIndex = 4;
+			// 
 			// dragControl1
 			// 
 			this.dragControl1.SelectControl = this.panel1;
@@ -291,6 +294,16 @@
 			// dragControl2
 			// 
 			this.dragControl2.SelectControl = this.label1;
+			// 
+			// equiptPostavk1
+			// 
+			this.equiptPostavk1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.equiptPostavk1.Location = new System.Drawing.Point(210, 0);
+			this.equiptPostavk1.Margin = new System.Windows.Forms.Padding(5);
+			this.equiptPostavk1.Name = "equiptPostavk1";
+			this.equiptPostavk1.Size = new System.Drawing.Size(921, 665);
+			this.equiptPostavk1.TabIndex = 5;
+			this.equiptPostavk1.Load += new System.EventHandler(this.EquiptPostavk1_Load);
 			// 
 			// Main
 			// 
@@ -338,6 +351,7 @@
 		private gazmechDataSetTableAdapters.TableAdapterManager tableAdapterManager;
 		private EquiptAdd equiptAdd1;
 		private EquiptEdit equiptEdit1;
+		private EquiptPostavk equiptPostavk1;
 	}
 }
 

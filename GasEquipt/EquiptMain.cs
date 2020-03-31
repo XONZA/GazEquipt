@@ -66,5 +66,18 @@ namespace GasEquipt
 				x = true;
 			}
 		}
+
+		private void EquiptMains_VisibleChanged(object sender, EventArgs e)
+		{
+			this.gas_equiptTableAdapter.Fill(this.gazmechDataSet.gas_equipt);
+			x = true;
+		}
+
+		private void Button1_Click(object sender, EventArgs e)
+		{
+			this.Validate();
+			this.gas_equiptBindingSource.EndEdit();
+			this.gas_equiptTableAdapter.Update(this.gazmechDataSet);
+		}
 	}
 }

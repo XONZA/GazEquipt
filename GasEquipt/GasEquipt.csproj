@@ -81,6 +81,12 @@
     <Compile Include="EquiptMain.Designer.cs">
       <DependentUpon>EquiptMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="EquiptPostavk.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EquiptPostavk.Designer.cs">
+      <DependentUpon>EquiptPostavk.cs</DependentUpon>
+    </Compile>
     <Compile Include="gazmechDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -105,6 +111,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EquiptMain.resx">
       <DependentUpon>EquiptMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EquiptPostavk.resx">
+      <DependentUpon>EquiptPostavk.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>

@@ -58,6 +58,10 @@ namespace GasEquipt
 		private void Button2_Click(object sender, EventArgs e)
 		{
 			equiptMains1.BringToFront();
+			equiptEdit1.Visible = false;
+			equiptMains1.Visible = true;
+			equiptPostavk1.Visible = false;
+			equiptAdd1.Visible = false;
 		}
 
 		private void Gas_equiptBindingNavigatorSaveItem_Click(object sender, EventArgs e)
@@ -71,11 +75,36 @@ namespace GasEquipt
 		private void Eq_add_Click(object sender, EventArgs e)
 		{
 			equiptAdd1.BringToFront();
+			equiptAdd1.AddLoad();
+			equiptEdit1.Visible = false;
+			equiptMains1.Visible = false;
+			equiptPostavk1.Visible = false;
+			equiptAdd1.Visible = true;
 		}
 
 		private void Eq_edit_Click(object sender, EventArgs e)
 		{
 			equiptEdit1.BringToFront();
+			equiptEdit1.Visible = true;
+			equiptMains1.Visible = false;
+			equiptPostavk1.Visible = false;
+			equiptAdd1.Visible = false;
+			equiptEdit1.equaEditfocus();
+		}
+
+		private void Eq_supply_Click(object sender, EventArgs e)
+		{
+			equiptPostavk1.BringToFront();
+			equiptEdit1.Visible = false;
+			equiptMains1.Visible = false;
+			equiptPostavk1.Visible = true;
+			equiptAdd1.Visible = false;
+			equiptPostavk1.equiptPostavkaLoad();
+		}
+
+		private void EquiptPostavk1_Load(object sender, EventArgs e)
+		{
+
 		}
 	}
 }
