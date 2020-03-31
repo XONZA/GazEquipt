@@ -60,6 +60,12 @@
     <Compile Include="Auntth.Designer.cs">
       <DependentUpon>Auntth.cs</DependentUpon>
     </Compile>
+    <Compile Include="ComponentSearch.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ComponentSearch.Designer.cs">
+      <DependentUpon>ComponentSearch.cs</DependentUpon>
+    </Compile>
     <Compile Include="DragControl.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -102,6 +108,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Auntth.resx">
       <DependentUpon>Auntth.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComponentSearch.resx">
+      <DependentUpon>ComponentSearch.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EquiptAdd.resx">
       <DependentUpon>EquiptAdd.cs</DependentUpon>

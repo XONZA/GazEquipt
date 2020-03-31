@@ -31,12 +31,22 @@
 			this.components = new System.ComponentModel.Container();
 			this.tabControl1 = new System.Windows.Forms.TabControl();
 			this.tabPage1 = new System.Windows.Forms.TabPage();
+			this.equiptPostavk1 = new GasEquipt.EquiptPostavk();
 			this.panel2 = new System.Windows.Forms.Panel();
 			this.eq_supply = new System.Windows.Forms.Button();
 			this.eq_edit = new System.Windows.Forms.Button();
 			this.eq_add = new System.Windows.Forms.Button();
 			this.eq_main = new System.Windows.Forms.Button();
+			this.equiptMains1 = new GasEquipt.EquiptMains();
+			this.equiptAdd1 = new GasEquipt.EquiptAdd();
+			this.equiptEdit1 = new GasEquipt.EquiptEdit();
 			this.tabPage2 = new System.Windows.Forms.TabPage();
+			this.panel3 = new System.Windows.Forms.Panel();
+			this.button6 = new System.Windows.Forms.Button();
+			this.button5 = new System.Windows.Forms.Button();
+			this.button4 = new System.Windows.Forms.Button();
+			this.button3 = new System.Windows.Forms.Button();
+			this.button2 = new System.Windows.Forms.Button();
 			this.tabPage3 = new System.Windows.Forms.TabPage();
 			this.tabPage4 = new System.Windows.Forms.TabPage();
 			this.panel1 = new System.Windows.Forms.Panel();
@@ -46,15 +56,14 @@
 			this.gas_equiptBindingSource = new System.Windows.Forms.BindingSource(this.components);
 			this.gas_equiptTableAdapter = new GasEquipt.gazmechDataSetTableAdapters.gas_equiptTableAdapter();
 			this.tableAdapterManager = new GasEquipt.gazmechDataSetTableAdapters.TableAdapterManager();
-			this.equiptMains1 = new GasEquipt.EquiptMains();
-			this.equiptAdd1 = new GasEquipt.EquiptAdd();
-			this.equiptEdit1 = new GasEquipt.EquiptEdit();
 			this.dragControl1 = new GasEquipt.DragControl();
 			this.dragControl2 = new GasEquipt.DragControl();
-			this.equiptPostavk1 = new GasEquipt.EquiptPostavk();
+			this.componentSearch1 = new GasEquipt.ComponentSearch();
 			this.tabControl1.SuspendLayout();
 			this.tabPage1.SuspendLayout();
 			this.panel2.SuspendLayout();
+			this.tabPage2.SuspendLayout();
+			this.panel3.SuspendLayout();
 			this.panel1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.gazmechDataSet)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.gas_equiptBindingSource)).BeginInit();
@@ -88,6 +97,16 @@
 			this.tabPage1.TabIndex = 0;
 			this.tabPage1.Text = "Оборудование";
 			this.tabPage1.UseVisualStyleBackColor = true;
+			// 
+			// equiptPostavk1
+			// 
+			this.equiptPostavk1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.equiptPostavk1.Location = new System.Drawing.Point(210, 0);
+			this.equiptPostavk1.Margin = new System.Windows.Forms.Padding(5);
+			this.equiptPostavk1.Name = "equiptPostavk1";
+			this.equiptPostavk1.Size = new System.Drawing.Size(921, 665);
+			this.equiptPostavk1.TabIndex = 5;
+			this.equiptPostavk1.Load += new System.EventHandler(this.EquiptPostavk1_Load);
 			// 
 			// panel2
 			// 
@@ -162,12 +181,42 @@
 			this.eq_main.Name = "eq_main";
 			this.eq_main.Size = new System.Drawing.Size(200, 64);
 			this.eq_main.TabIndex = 0;
-			this.eq_main.Text = "Информация";
+			this.eq_main.Text = "Информация и поиск";
 			this.eq_main.UseVisualStyleBackColor = false;
 			this.eq_main.Click += new System.EventHandler(this.Button2_Click);
 			// 
+			// equiptMains1
+			// 
+			this.equiptMains1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.equiptMains1.Location = new System.Drawing.Point(210, 0);
+			this.equiptMains1.Margin = new System.Windows.Forms.Padding(4);
+			this.equiptMains1.Name = "equiptMains1";
+			this.equiptMains1.Size = new System.Drawing.Size(921, 665);
+			this.equiptMains1.TabIndex = 2;
+			// 
+			// equiptAdd1
+			// 
+			this.equiptAdd1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.equiptAdd1.Location = new System.Drawing.Point(210, 3);
+			this.equiptAdd1.Margin = new System.Windows.Forms.Padding(4);
+			this.equiptAdd1.MaximumSize = new System.Drawing.Size(1388, 1017);
+			this.equiptAdd1.Name = "equiptAdd1";
+			this.equiptAdd1.Size = new System.Drawing.Size(921, 665);
+			this.equiptAdd1.TabIndex = 3;
+			// 
+			// equiptEdit1
+			// 
+			this.equiptEdit1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.equiptEdit1.Location = new System.Drawing.Point(210, 3);
+			this.equiptEdit1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+			this.equiptEdit1.Name = "equiptEdit1";
+			this.equiptEdit1.Size = new System.Drawing.Size(921, 665);
+			this.equiptEdit1.TabIndex = 4;
+			// 
 			// tabPage2
 			// 
+			this.tabPage2.Controls.Add(this.componentSearch1);
+			this.tabPage2.Controls.Add(this.panel3);
 			this.tabPage2.Location = new System.Drawing.Point(4, 29);
 			this.tabPage2.Name = "tabPage2";
 			this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -175,6 +224,95 @@
 			this.tabPage2.TabIndex = 1;
 			this.tabPage2.Text = "Комплектующие";
 			this.tabPage2.UseVisualStyleBackColor = true;
+			// 
+			// panel3
+			// 
+			this.panel3.BackColor = System.Drawing.Color.RoyalBlue;
+			this.panel3.Controls.Add(this.button6);
+			this.panel3.Controls.Add(this.button5);
+			this.panel3.Controls.Add(this.button4);
+			this.panel3.Controls.Add(this.button3);
+			this.panel3.Controls.Add(this.button2);
+			this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
+			this.panel3.Location = new System.Drawing.Point(3, 3);
+			this.panel3.Name = "panel3";
+			this.panel3.Size = new System.Drawing.Size(200, 655);
+			this.panel3.TabIndex = 0;
+			// 
+			// button6
+			// 
+			this.button6.BackColor = System.Drawing.Color.CornflowerBlue;
+			this.button6.Dock = System.Windows.Forms.DockStyle.Top;
+			this.button6.FlatAppearance.BorderSize = 0;
+			this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.button6.ForeColor = System.Drawing.SystemColors.Control;
+			this.button6.Location = new System.Drawing.Point(0, 256);
+			this.button6.Name = "button6";
+			this.button6.Size = new System.Drawing.Size(200, 64);
+			this.button6.TabIndex = 5;
+			this.button6.Text = "Изменение/Удаление производителей";
+			this.button6.UseVisualStyleBackColor = false;
+			// 
+			// button5
+			// 
+			this.button5.BackColor = System.Drawing.Color.CornflowerBlue;
+			this.button5.Dock = System.Windows.Forms.DockStyle.Top;
+			this.button5.FlatAppearance.BorderSize = 0;
+			this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.button5.ForeColor = System.Drawing.SystemColors.Control;
+			this.button5.Location = new System.Drawing.Point(0, 192);
+			this.button5.Name = "button5";
+			this.button5.Size = new System.Drawing.Size(200, 64);
+			this.button5.TabIndex = 4;
+			this.button5.Text = "Добавление производителей";
+			this.button5.UseVisualStyleBackColor = false;
+			// 
+			// button4
+			// 
+			this.button4.BackColor = System.Drawing.Color.CornflowerBlue;
+			this.button4.Dock = System.Windows.Forms.DockStyle.Top;
+			this.button4.FlatAppearance.BorderSize = 0;
+			this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.button4.ForeColor = System.Drawing.SystemColors.Control;
+			this.button4.Location = new System.Drawing.Point(0, 128);
+			this.button4.Name = "button4";
+			this.button4.Size = new System.Drawing.Size(200, 64);
+			this.button4.TabIndex = 3;
+			this.button4.Text = "Изменение/Удаление компанетов";
+			this.button4.UseVisualStyleBackColor = false;
+			// 
+			// button3
+			// 
+			this.button3.BackColor = System.Drawing.Color.CornflowerBlue;
+			this.button3.Dock = System.Windows.Forms.DockStyle.Top;
+			this.button3.FlatAppearance.BorderSize = 0;
+			this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.button3.ForeColor = System.Drawing.SystemColors.Control;
+			this.button3.Location = new System.Drawing.Point(0, 64);
+			this.button3.Name = "button3";
+			this.button3.Size = new System.Drawing.Size(200, 64);
+			this.button3.TabIndex = 2;
+			this.button3.Text = "Добавление компонентов";
+			this.button3.UseVisualStyleBackColor = false;
+			// 
+			// button2
+			// 
+			this.button2.BackColor = System.Drawing.Color.CornflowerBlue;
+			this.button2.Dock = System.Windows.Forms.DockStyle.Top;
+			this.button2.FlatAppearance.BorderSize = 0;
+			this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.button2.ForeColor = System.Drawing.SystemColors.Control;
+			this.button2.Location = new System.Drawing.Point(0, 0);
+			this.button2.Name = "button2";
+			this.button2.Size = new System.Drawing.Size(200, 64);
+			this.button2.TabIndex = 1;
+			this.button2.Text = "Информация и поиск";
+			this.button2.UseVisualStyleBackColor = false;
 			// 
 			// tabPage3
 			// 
@@ -259,34 +397,6 @@
 			this.tableAdapterManager.loginTableAdapter = null;
 			this.tableAdapterManager.UpdateOrder = GasEquipt.gazmechDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
 			// 
-			// equiptMains1
-			// 
-			this.equiptMains1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.equiptMains1.Location = new System.Drawing.Point(210, 0);
-			this.equiptMains1.Margin = new System.Windows.Forms.Padding(4);
-			this.equiptMains1.Name = "equiptMains1";
-			this.equiptMains1.Size = new System.Drawing.Size(921, 665);
-			this.equiptMains1.TabIndex = 2;
-			// 
-			// equiptAdd1
-			// 
-			this.equiptAdd1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.equiptAdd1.Location = new System.Drawing.Point(210, 3);
-			this.equiptAdd1.Margin = new System.Windows.Forms.Padding(4);
-			this.equiptAdd1.MaximumSize = new System.Drawing.Size(1388, 1017);
-			this.equiptAdd1.Name = "equiptAdd1";
-			this.equiptAdd1.Size = new System.Drawing.Size(921, 665);
-			this.equiptAdd1.TabIndex = 3;
-			// 
-			// equiptEdit1
-			// 
-			this.equiptEdit1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.equiptEdit1.Location = new System.Drawing.Point(210, 3);
-			this.equiptEdit1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-			this.equiptEdit1.Name = "equiptEdit1";
-			this.equiptEdit1.Size = new System.Drawing.Size(921, 665);
-			this.equiptEdit1.TabIndex = 4;
-			// 
 			// dragControl1
 			// 
 			this.dragControl1.SelectControl = this.panel1;
@@ -295,15 +405,15 @@
 			// 
 			this.dragControl2.SelectControl = this.label1;
 			// 
-			// equiptPostavk1
+			// componentSearch1
 			// 
-			this.equiptPostavk1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.equiptPostavk1.Location = new System.Drawing.Point(210, 0);
-			this.equiptPostavk1.Margin = new System.Windows.Forms.Padding(5);
-			this.equiptPostavk1.Name = "equiptPostavk1";
-			this.equiptPostavk1.Size = new System.Drawing.Size(921, 665);
-			this.equiptPostavk1.TabIndex = 5;
-			this.equiptPostavk1.Load += new System.EventHandler(this.EquiptPostavk1_Load);
+			this.componentSearch1.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.componentSearch1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.componentSearch1.Location = new System.Drawing.Point(203, 3);
+			this.componentSearch1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+			this.componentSearch1.Name = "componentSearch1";
+			this.componentSearch1.Size = new System.Drawing.Size(925, 655);
+			this.componentSearch1.TabIndex = 1;
 			// 
 			// Main
 			// 
@@ -320,6 +430,8 @@
 			this.tabControl1.ResumeLayout(false);
 			this.tabPage1.ResumeLayout(false);
 			this.panel2.ResumeLayout(false);
+			this.tabPage2.ResumeLayout(false);
+			this.panel3.ResumeLayout(false);
 			this.panel1.ResumeLayout(false);
 			this.panel1.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.gazmechDataSet)).EndInit();
@@ -352,6 +464,13 @@
 		private EquiptAdd equiptAdd1;
 		private EquiptEdit equiptEdit1;
 		private EquiptPostavk equiptPostavk1;
+		private System.Windows.Forms.Panel panel3;
+		private System.Windows.Forms.Button button6;
+		private System.Windows.Forms.Button button5;
+		private System.Windows.Forms.Button button4;
+		private System.Windows.Forms.Button button3;
+		private System.Windows.Forms.Button button2;
+		private ComponentSearch componentSearch1;
 	}
 }
 
