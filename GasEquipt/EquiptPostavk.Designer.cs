@@ -57,6 +57,8 @@
 			this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.label2 = new System.Windows.Forms.Label();
+			this.label3 = new System.Windows.Forms.Label();
 			((System.ComponentModel.ISupportInitialize)(this.gazmechDataSet)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.gas_equiptBindingSource)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.gas_equiptDataGridView)).BeginInit();
@@ -115,11 +117,11 @@
             this.dataGridViewTextBoxColumn4});
 			this.gas_equiptDataGridView.DataSource = this.gas_equiptBindingSource;
 			this.gas_equiptDataGridView.EnableHeadersVisualStyles = false;
-			this.gas_equiptDataGridView.Location = new System.Drawing.Point(0, 0);
+			this.gas_equiptDataGridView.Location = new System.Drawing.Point(3, 40);
 			this.gas_equiptDataGridView.Margin = new System.Windows.Forms.Padding(2);
 			this.gas_equiptDataGridView.Name = "gas_equiptDataGridView";
 			this.gas_equiptDataGridView.ReadOnly = true;
-			this.gas_equiptDataGridView.Size = new System.Drawing.Size(464, 662);
+			this.gas_equiptDataGridView.Size = new System.Drawing.Size(908, 336);
 			this.gas_equiptDataGridView.TabIndex = 1;
 			this.gas_equiptDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Gas_equiptDataGridView_CellClick);
 			this.gas_equiptDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Gas_equiptDataGridView_CellContentClick);
@@ -177,10 +179,10 @@
             this.dataGridViewTextBoxColumn8});
 			this.gas_reciptDataGridView.DataSource = this.gas_reciptBindingSource;
 			this.gas_reciptDataGridView.EnableHeadersVisualStyles = false;
-			this.gas_reciptDataGridView.Location = new System.Drawing.Point(469, 0);
+			this.gas_reciptDataGridView.Location = new System.Drawing.Point(3, 414);
 			this.gas_reciptDataGridView.Name = "gas_reciptDataGridView";
 			this.gas_reciptDataGridView.ReadOnly = true;
-			this.gas_reciptDataGridView.Size = new System.Drawing.Size(449, 510);
+			this.gas_reciptDataGridView.Size = new System.Drawing.Size(562, 248);
 			this.gas_reciptDataGridView.TabIndex = 1;
 			// 
 			// dataGridViewTextBoxColumn5
@@ -227,9 +229,9 @@
 			// button1
 			// 
 			this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.button1.Location = new System.Drawing.Point(469, 582);
+			this.button1.Location = new System.Drawing.Point(571, 469);
 			this.button1.Name = "button1";
-			this.button1.Size = new System.Drawing.Size(445, 64);
+			this.button1.Size = new System.Drawing.Size(336, 64);
 			this.button1.TabIndex = 2;
 			this.button1.Text = "Создать";
 			this.button1.UseVisualStyleBackColor = true;
@@ -259,16 +261,16 @@
 			// 
 			// numericUpDown1
 			// 
-			this.numericUpDown1.Location = new System.Drawing.Point(469, 550);
+			this.numericUpDown1.Location = new System.Drawing.Point(571, 424);
 			this.numericUpDown1.Name = "numericUpDown1";
-			this.numericUpDown1.Size = new System.Drawing.Size(445, 26);
+			this.numericUpDown1.Size = new System.Drawing.Size(336, 26);
 			this.numericUpDown1.TabIndex = 4;
 			// 
 			// label1
 			// 
 			this.label1.AutoSize = true;
 			this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.label1.Location = new System.Drawing.Point(469, 513);
+			this.label1.Location = new System.Drawing.Point(567, 387);
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(117, 24);
 			this.label1.TabIndex = 5;
@@ -306,10 +308,32 @@
 			this.dataGridViewTextBoxColumn13.HeaderText = "gc_count";
 			this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
 			// 
+			// label2
+			// 
+			this.label2.AutoSize = true;
+			this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.label2.Location = new System.Drawing.Point(3, 14);
+			this.label2.Name = "label2";
+			this.label2.Size = new System.Drawing.Size(144, 24);
+			this.label2.TabIndex = 6;
+			this.label2.Text = "Оборудование";
+			// 
+			// label3
+			// 
+			this.label3.AutoSize = true;
+			this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.label3.Location = new System.Drawing.Point(3, 387);
+			this.label3.Name = "label3";
+			this.label3.Size = new System.Drawing.Size(192, 24);
+			this.label3.TabIndex = 7;
+			this.label3.Text = "Компоненты сборки";
+			// 
 			// EquiptPostavk
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.Controls.Add(this.label3);
+			this.Controls.Add(this.label2);
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.numericUpDown1);
 			this.Controls.Add(this.gas_componentDataGridView);
@@ -365,5 +389,7 @@
 		private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
 		private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
 		private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
+		private System.Windows.Forms.Label label2;
+		private System.Windows.Forms.Label label3;
 	}
 }

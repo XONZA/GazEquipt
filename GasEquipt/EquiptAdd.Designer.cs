@@ -33,11 +33,6 @@
 			this.eqa_coast = new System.Windows.Forms.Label();
 			this.eqa_boxname = new System.Windows.Forms.TextBox();
 			this.gas_componentDataGridView = new System.Windows.Forms.DataGridView();
-			this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.gas_componentBindingSource = new System.Windows.Forms.BindingSource(this.components);
 			this.gazmechDataSet = new GasEquipt.gazmechDataSet();
 			this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
@@ -53,6 +48,11 @@
 			this.gas_componentTableAdapter = new GasEquipt.gazmechDataSetTableAdapters.gas_componentTableAdapter();
 			this.gas_reciptTableAdapter = new GasEquipt.gazmechDataSetTableAdapters.gas_reciptTableAdapter();
 			this.gas_reciptBindingSource = new System.Windows.Forms.BindingSource(this.components);
+			this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			((System.ComponentModel.ISupportInitialize)(this.gas_componentDataGridView)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.gas_componentBindingSource)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.gazmechDataSet)).BeginInit();
@@ -103,47 +103,12 @@
             this.dataGridViewTextBoxColumn5});
 			this.gas_componentDataGridView.DataSource = this.gas_componentBindingSource;
 			this.gas_componentDataGridView.EnableHeadersVisualStyles = false;
-			this.gas_componentDataGridView.Location = new System.Drawing.Point(315, 0);
+			this.gas_componentDataGridView.Location = new System.Drawing.Point(298, 0);
 			this.gas_componentDataGridView.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
 			this.gas_componentDataGridView.Name = "gas_componentDataGridView";
 			this.gas_componentDataGridView.ReadOnly = true;
-			this.gas_componentDataGridView.Size = new System.Drawing.Size(379, 660);
+			this.gas_componentDataGridView.Size = new System.Drawing.Size(396, 660);
 			this.gas_componentDataGridView.TabIndex = 3;
-			// 
-			// dataGridViewTextBoxColumn1
-			// 
-			this.dataGridViewTextBoxColumn1.DataPropertyName = "idgas_component";
-			this.dataGridViewTextBoxColumn1.HeaderText = "idgas_component";
-			this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-			this.dataGridViewTextBoxColumn1.Visible = false;
-			// 
-			// dataGridViewTextBoxColumn2
-			// 
-			this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-			this.dataGridViewTextBoxColumn2.DataPropertyName = "gc_name";
-			this.dataGridViewTextBoxColumn2.HeaderText = "Название комплектующей";
-			this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-			// 
-			// dataGridViewTextBoxColumn3
-			// 
-			this.dataGridViewTextBoxColumn3.DataPropertyName = "gc_coast";
-			this.dataGridViewTextBoxColumn3.HeaderText = "gc_coast";
-			this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-			this.dataGridViewTextBoxColumn3.Visible = false;
-			// 
-			// dataGridViewTextBoxColumn4
-			// 
-			this.dataGridViewTextBoxColumn4.DataPropertyName = "id_compony";
-			this.dataGridViewTextBoxColumn4.HeaderText = "id_compony";
-			this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-			this.dataGridViewTextBoxColumn4.Visible = false;
-			// 
-			// dataGridViewTextBoxColumn5
-			// 
-			this.dataGridViewTextBoxColumn5.DataPropertyName = "gc_count";
-			this.dataGridViewTextBoxColumn5.HeaderText = "gc_count";
-			this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-			this.dataGridViewTextBoxColumn5.Visible = false;
 			// 
 			// gas_componentBindingSource
 			// 
@@ -208,7 +173,7 @@
 			// 
 			// panel1
 			// 
-			this.panel1.BackColor = System.Drawing.Color.LightSalmon;
+			this.panel1.BackColor = System.Drawing.Color.RoyalBlue;
 			this.panel1.Location = new System.Drawing.Point(298, 0);
 			this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
 			this.panel1.Name = "panel1";
@@ -258,6 +223,47 @@
 			// 
 			this.gas_reciptBindingSource.DataMember = "gas_recipt";
 			this.gas_reciptBindingSource.DataSource = this.gazmechDataSet;
+			// 
+			// dataGridViewTextBoxColumn1
+			// 
+			this.dataGridViewTextBoxColumn1.DataPropertyName = "idgas_component";
+			this.dataGridViewTextBoxColumn1.HeaderText = "idgas_component";
+			this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+			this.dataGridViewTextBoxColumn1.ReadOnly = true;
+			this.dataGridViewTextBoxColumn1.Visible = false;
+			// 
+			// dataGridViewTextBoxColumn2
+			// 
+			this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+			this.dataGridViewTextBoxColumn2.DataPropertyName = "gc_name";
+			this.dataGridViewTextBoxColumn2.HeaderText = "Название комплектующей";
+			this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+			this.dataGridViewTextBoxColumn2.ReadOnly = true;
+			// 
+			// dataGridViewTextBoxColumn3
+			// 
+			this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+			this.dataGridViewTextBoxColumn3.DataPropertyName = "gc_coast";
+			this.dataGridViewTextBoxColumn3.FillWeight = 80F;
+			this.dataGridViewTextBoxColumn3.HeaderText = "Цена(руб.)";
+			this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+			this.dataGridViewTextBoxColumn3.ReadOnly = true;
+			// 
+			// dataGridViewTextBoxColumn4
+			// 
+			this.dataGridViewTextBoxColumn4.DataPropertyName = "id_compony";
+			this.dataGridViewTextBoxColumn4.HeaderText = "id_compony";
+			this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+			this.dataGridViewTextBoxColumn4.ReadOnly = true;
+			this.dataGridViewTextBoxColumn4.Visible = false;
+			// 
+			// dataGridViewTextBoxColumn5
+			// 
+			this.dataGridViewTextBoxColumn5.DataPropertyName = "gc_count";
+			this.dataGridViewTextBoxColumn5.HeaderText = "gc_count";
+			this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+			this.dataGridViewTextBoxColumn5.ReadOnly = true;
+			this.dataGridViewTextBoxColumn5.Visible = false;
 			// 
 			// EquiptAdd
 			// 

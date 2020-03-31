@@ -176,15 +176,10 @@ namespace GasEquipt
 				rowe.Cells[2].Value = Convert.ToDecimal(coastequip);
 			}
 			rowed.Cells[1].Value = Convert.ToInt32(numericUpDown2.Value);
-			this.gas_equiptBindingSource.EndEdit();
 			this.gas_reciptBindingSource.EndEdit();
-			this.gas_reciptTableAdapter.FillEquiptEdit(this.gazmechDataSet.gas_recipt);
-			this.gas_equiptTableAdapter.Fill(this.gazmechDataSet.gas_equipt);
 			this.gas_reciptTableAdapter.Update(this.gazmechDataSet.gas_recipt);
+			this.gas_equiptBindingSource.EndEdit();
 			this.gas_equiptTableAdapter.Update(this.gazmechDataSet);
-			//this.gas_equiptTableAdapter.Fill(this.gazmechDataSet.gas_equipt);
-			//this.gas_reciptTableAdapter.Update(this.gazmechDataSet.gas_recipt);
-			//this.gas_equiptTableAdapter.Update(this.gazmechDataSet);
 		}
 
 		private void Button2_Click(object sender, EventArgs e)
