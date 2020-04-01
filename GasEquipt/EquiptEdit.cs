@@ -18,6 +18,7 @@ namespace GasEquipt
 
 		public void equaEditfocus()
 		{
+			tabControl1.Visible = false;
 			this.gas_reciptTableAdapter.FillEquiptEdit(this.gazmechDataSet.gas_recipt);
 			this.gas_componentTableAdapter.Fill(this.gazmechDataSet.gas_component);
 			this.gas_equiptTableAdapter.Fill(this.gazmechDataSet.gas_equipt);
@@ -31,6 +32,7 @@ namespace GasEquipt
 			textBox1.Text = "";
 			numericUpDown1.Value = 0;
 			numericUpDown2.Value = 0;
+			this.gas_equiptBindingSource.MoveFirst();
 		}
 		public EquiptEdit()
 		{
@@ -83,6 +85,7 @@ namespace GasEquipt
 
 		private void EquiptEdit_Load(object sender, EventArgs e)
 		{
+			tabControl1.Visible = false;
 			this.gas_reciptTableAdapter.FillEquiptEdit(this.gazmechDataSet.gas_recipt);
 			this.gas_componentTableAdapter.Fill(this.gazmechDataSet.gas_component);
 			this.gas_equiptTableAdapter.Fill(this.gazmechDataSet.gas_equipt);
@@ -93,6 +96,7 @@ namespace GasEquipt
 			DataView dv = new DataView(gazmechDataSet.gas_recipt);
 			dv.RowFilter = ("id_gas_equipt = '" + 0 + "' ");
 			gas_reciptDataGridView.DataSource = dv;
+			this.gas_equiptBindingSource.MoveFirst();
 		}
 
 		private void FillEquiptEditToolStripButton_Click_2(object sender, EventArgs e)
@@ -116,6 +120,7 @@ namespace GasEquipt
 			DataView dv = new DataView(gazmechDataSet.gas_recipt);
 			dv.RowFilter = ("id_gas_equipt = '" + idequip + "' ");
 			gas_reciptDataGridView.DataSource = dv;
+			tabControl1.Visible = true;
 		}
 
 		private void FillEquiptEditToolStripButton_Click_3(object sender, EventArgs e)

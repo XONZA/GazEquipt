@@ -29,6 +29,8 @@ namespace GasEquipt
 			dv.RowFilter = ("id_gas_equipt = '" + 0 + "' ");
 			gas_reciptDataGridView.DataSource = dv;
 			numericUpDown1.Value = 0;
+			this.gas_equiptBindingSource.MoveFirst();
+			button1.Enabled = false;
 		}
 		public EquiptPostavk()
 		{
@@ -54,6 +56,7 @@ namespace GasEquipt
 			DataView dv = new DataView(gazmechDataSet.gas_recipt);
 			dv.RowFilter = ("id_gas_equipt = '" + 0 + "' ");
 			gas_reciptDataGridView.DataSource = dv;
+			this.gas_equiptBindingSource.MoveFirst();
 		}
 
 		private void Button2_Click(object sender, EventArgs e)
@@ -152,6 +155,7 @@ namespace GasEquipt
 			DataView dv = new DataView(gazmechDataSet.gas_recipt);
 			dv.RowFilter = ("id_gas_equipt = '" + idequip + "' ");
 			gas_reciptDataGridView.DataSource = dv;
+			button1.Enabled = true;
 		}
 	}
 }

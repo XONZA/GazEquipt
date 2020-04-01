@@ -50,13 +50,13 @@
 			this.button1 = new System.Windows.Forms.Button();
 			this.gas_componentBindingSource = new System.Windows.Forms.BindingSource(this.components);
 			this.gas_componentDataGridView = new System.Windows.Forms.DataGridView();
-			this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-			this.label1 = new System.Windows.Forms.Label();
 			this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+			this.label1 = new System.Windows.Forms.Label();
 			this.label2 = new System.Windows.Forms.Label();
 			this.label3 = new System.Windows.Forms.Label();
 			((System.ComponentModel.ISupportInitialize)(this.gazmechDataSet)).BeginInit();
@@ -228,8 +228,9 @@
 			// 
 			// button1
 			// 
+			this.button1.Enabled = false;
 			this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.button1.Location = new System.Drawing.Point(571, 469);
+			this.button1.Location = new System.Drawing.Point(575, 579);
 			this.button1.Name = "button1";
 			this.button1.Size = new System.Drawing.Size(336, 64);
 			this.button1.TabIndex = 2;
@@ -258,23 +259,6 @@
 			this.gas_componentDataGridView.Size = new System.Drawing.Size(10, 10);
 			this.gas_componentDataGridView.TabIndex = 3;
 			this.gas_componentDataGridView.Visible = false;
-			// 
-			// numericUpDown1
-			// 
-			this.numericUpDown1.Location = new System.Drawing.Point(571, 424);
-			this.numericUpDown1.Name = "numericUpDown1";
-			this.numericUpDown1.Size = new System.Drawing.Size(336, 26);
-			this.numericUpDown1.TabIndex = 4;
-			// 
-			// label1
-			// 
-			this.label1.AutoSize = true;
-			this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.label1.Location = new System.Drawing.Point(567, 387);
-			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(117, 24);
-			this.label1.TabIndex = 5;
-			this.label1.Text = "Количество";
 			// 
 			// dataGridViewTextBoxColumn9
 			// 
@@ -307,6 +291,23 @@
 			this.dataGridViewTextBoxColumn13.DataPropertyName = "gc_count";
 			this.dataGridViewTextBoxColumn13.HeaderText = "gc_count";
 			this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
+			// 
+			// numericUpDown1
+			// 
+			this.numericUpDown1.Location = new System.Drawing.Point(575, 534);
+			this.numericUpDown1.Name = "numericUpDown1";
+			this.numericUpDown1.Size = new System.Drawing.Size(336, 26);
+			this.numericUpDown1.TabIndex = 4;
+			// 
+			// label1
+			// 
+			this.label1.AutoSize = true;
+			this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.label1.Location = new System.Drawing.Point(571, 497);
+			this.label1.Name = "label1";
+			this.label1.Size = new System.Drawing.Size(117, 24);
+			this.label1.TabIndex = 5;
+			this.label1.Text = "Количество";
 			// 
 			// label2
 			// 

@@ -13,6 +13,11 @@ namespace GasEquipt
 	public partial class EquiptMains : UserControl
 	{
 		public bool x;
+
+		public void EquipMainLoad()
+		{
+			this.gas_equiptTableAdapter.Fill(this.gazmechDataSet.gas_equipt);
+		}
 		public EquiptMains()
 		{
 			InitializeComponent();

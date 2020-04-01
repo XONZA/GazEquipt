@@ -20,6 +20,8 @@ namespace GasEquipt
 
 		private void Main_Load(object sender, EventArgs e)
 		{
+			// TODO: данная строка кода позволяет загрузить данные в таблицу "gazmechDataSet.component_compony". При необходимости она может быть перемещена или удалена.
+			this.component_componyTableAdapter.Fill(this.gazmechDataSet.component_compony);
 			// TODO: данная строка кода позволяет загрузить данные в таблицу "gazmechDataSet.gas_equipt". При необходимости она может быть перемещена или удалена.
 			this.gas_equiptTableAdapter.Fill(this.gazmechDataSet.gas_equipt);
 			Auntth au = new Auntth();
@@ -58,6 +60,7 @@ namespace GasEquipt
 		private void Button2_Click(object sender, EventArgs e)
 		{
 			equiptMains1.BringToFront();
+			equiptMains1.EquipMainLoad();
 			equiptEdit1.Visible = false;
 			equiptMains1.Visible = true;
 			equiptPostavk1.Visible = false;
@@ -105,6 +108,36 @@ namespace GasEquipt
 		private void EquiptPostavk1_Load(object sender, EventArgs e)
 		{
 
+		}
+
+		private void Button3_Click(object sender, EventArgs e)
+		{
+			cOmponentAdd1.BringToFront();
+			cOmponentAdd1.ComponentAddLoad();
+		}
+
+		private void Button2_Click_1(object sender, EventArgs e)
+		{
+			componentSearch1.BringToFront();
+			componentSearch1.ComSearch();
+		}
+
+		private void Button5_Click(object sender, EventArgs e)
+		{
+			componentCompony1.BringToFront();
+			componentCompony1.CompComLoad();
+		}
+		
+		private void TabControl1_SelectedIndexChanged(object sender, EventArgs e)
+		{
+			//Обновление данных при переключение между табами
+			componentCompony1.CompComLoad();
+			cOmponentAdd1.ComponentAddLoad();
+			componentSearch1.ComSearch();
+			equiptPostavk1.equiptPostavkaLoad();
+			equiptEdit1.equaEditfocus();
+			equiptAdd1.AddLoad();
+			equiptMains1.EquipMainLoad();
 		}
 	}
 }

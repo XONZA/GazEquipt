@@ -4768,7 +4768,8 @@ namespace GasEquipt.gazmechDataSetTableAdapters {
             this._commandCollection[1].CommandText = @"SELECT     gas_component.idgas_component, gas_component.gc_name, gas_component.gc_coast, gas_component.id_compony, gas_component.gc_count, 
                       component_compony.co_Name
 FROM         gas_component INNER JOIN
-                      component_compony ON gas_component.id_compony = component_compony.idcomponent_compony";
+                      component_compony ON gas_component.id_compony = component_compony.idcomponent_compony
+ORDER BY gas_component.idgas_component";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
         }
         

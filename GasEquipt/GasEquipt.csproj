@@ -60,6 +60,18 @@
     <Compile Include="Auntth.Designer.cs">
       <DependentUpon>Auntth.cs</DependentUpon>
     </Compile>
+    <Compile Include="COmponentAdd.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="COmponentAdd.Designer.cs">
+      <DependentUpon>COmponentAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ComponentCompony.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ComponentCompony.Designer.cs">
+      <DependentUpon>ComponentCompony.cs</DependentUpon>
+    </Compile>
     <Compile Include="ComponentSearch.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -108,6 +120,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Auntth.resx">
       <DependentUpon>Auntth.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="COmponentAdd.resx">
+      <DependentUpon>COmponentAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComponentCompony.resx">
+      <DependentUpon>ComponentCompony.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ComponentSearch.resx">
       <DependentUpon>ComponentSearch.cs</DependentUpon>

@@ -35,6 +35,10 @@
 			this.gas_equiptTableAdapter = new GasEquipt.gazmechDataSetTableAdapters.gas_equiptTableAdapter();
 			this.tableAdapterManager = new GasEquipt.gazmechDataSetTableAdapters.TableAdapterManager();
 			this.gas_equiptDataGridView = new System.Windows.Forms.DataGridView();
+			this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.gas_componentBindingSource = new System.Windows.Forms.BindingSource(this.components);
 			this.gas_componentTableAdapter = new GasEquipt.gazmechDataSetTableAdapters.gas_componentTableAdapter();
 			this.gas_componentDataGridView = new System.Windows.Forms.DataGridView();
@@ -46,6 +50,12 @@
 			this.gas_reciptBindingSource = new System.Windows.Forms.BindingSource(this.components);
 			this.gas_reciptTableAdapter = new GasEquipt.gazmechDataSetTableAdapters.gas_reciptTableAdapter();
 			this.gas_reciptDataGridView = new System.Windows.Forms.DataGridView();
+			this.complname = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.button2 = new System.Windows.Forms.Button();
 			this.gazmechDataSet1 = new GasEquipt.gazmechDataSet();
 			this.button3 = new System.Windows.Forms.Button();
@@ -61,16 +71,7 @@
 			this.tabControl1 = new System.Windows.Forms.TabControl();
 			this.tabPage1 = new System.Windows.Forms.TabPage();
 			this.tabPage2 = new System.Windows.Forms.TabPage();
-			this.complname = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.label4 = new System.Windows.Forms.Label();
 			r_count_componentLabel = new System.Windows.Forms.Label();
 			((System.ComponentModel.ISupportInitialize)(this.gazmechDataSet)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.gas_equiptBindingSource)).BeginInit();
@@ -142,6 +143,39 @@
 			this.gas_equiptDataGridView.Size = new System.Drawing.Size(450, 665);
 			this.gas_equiptDataGridView.TabIndex = 1;
 			this.gas_equiptDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Gas_equiptDataGridView_CellClick);
+			// 
+			// dataGridViewTextBoxColumn1
+			// 
+			this.dataGridViewTextBoxColumn1.DataPropertyName = "idgas_equipt";
+			this.dataGridViewTextBoxColumn1.HeaderText = "idgas_equipt";
+			this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+			this.dataGridViewTextBoxColumn1.ReadOnly = true;
+			this.dataGridViewTextBoxColumn1.Visible = false;
+			// 
+			// dataGridViewTextBoxColumn2
+			// 
+			this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+			this.dataGridViewTextBoxColumn2.DataPropertyName = "gq_name";
+			this.dataGridViewTextBoxColumn2.HeaderText = "Оборудование";
+			this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+			this.dataGridViewTextBoxColumn2.ReadOnly = true;
+			// 
+			// dataGridViewTextBoxColumn3
+			// 
+			this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+			this.dataGridViewTextBoxColumn3.DataPropertyName = "gq_coast";
+			this.dataGridViewTextBoxColumn3.FillWeight = 75F;
+			this.dataGridViewTextBoxColumn3.HeaderText = "Цена(руб.)";
+			this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+			this.dataGridViewTextBoxColumn3.ReadOnly = true;
+			// 
+			// dataGridViewTextBoxColumn4
+			// 
+			this.dataGridViewTextBoxColumn4.DataPropertyName = "gq_count";
+			this.dataGridViewTextBoxColumn4.HeaderText = "gq_count";
+			this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+			this.dataGridViewTextBoxColumn4.ReadOnly = true;
+			this.dataGridViewTextBoxColumn4.Visible = false;
 			// 
 			// gas_componentBindingSource
 			// 
@@ -244,6 +278,59 @@
 			this.gas_reciptDataGridView.ReadOnly = true;
 			this.gas_reciptDataGridView.Size = new System.Drawing.Size(445, 254);
 			this.gas_reciptDataGridView.TabIndex = 3;
+			// 
+			// complname
+			// 
+			this.complname.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+			this.complname.DataPropertyName = "gc_name";
+			this.complname.HeaderText = "Компонент";
+			this.complname.Name = "complname";
+			this.complname.ReadOnly = true;
+			// 
+			// dataGridViewTextBoxColumn13
+			// 
+			this.dataGridViewTextBoxColumn13.DataPropertyName = "r_count_component";
+			this.dataGridViewTextBoxColumn13.HeaderText = "Количество";
+			this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
+			this.dataGridViewTextBoxColumn13.ReadOnly = true;
+			this.dataGridViewTextBoxColumn13.Width = 110;
+			// 
+			// dataGridViewTextBoxColumn10
+			// 
+			this.dataGridViewTextBoxColumn10.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+			this.dataGridViewTextBoxColumn10.DataPropertyName = "idgas_recipt";
+			this.dataGridViewTextBoxColumn10.HeaderText = "idgas_recipt";
+			this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+			this.dataGridViewTextBoxColumn10.ReadOnly = true;
+			this.dataGridViewTextBoxColumn10.Visible = false;
+			this.dataGridViewTextBoxColumn10.Width = 5;
+			// 
+			// dataGridViewTextBoxColumn11
+			// 
+			this.dataGridViewTextBoxColumn11.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+			this.dataGridViewTextBoxColumn11.DataPropertyName = "id_gas_componenta";
+			this.dataGridViewTextBoxColumn11.HeaderText = "id_gas_componenta";
+			this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+			this.dataGridViewTextBoxColumn11.ReadOnly = true;
+			this.dataGridViewTextBoxColumn11.Visible = false;
+			this.dataGridViewTextBoxColumn11.Width = 5;
+			// 
+			// dataGridViewTextBoxColumn12
+			// 
+			this.dataGridViewTextBoxColumn12.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+			this.dataGridViewTextBoxColumn12.DataPropertyName = "id_gas_equipt";
+			this.dataGridViewTextBoxColumn12.HeaderText = "id_gas_equipt";
+			this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
+			this.dataGridViewTextBoxColumn12.ReadOnly = true;
+			this.dataGridViewTextBoxColumn12.Visible = false;
+			this.dataGridViewTextBoxColumn12.Width = 5;
+			// 
+			// Column1
+			// 
+			this.Column1.DataPropertyName = "gc_coast";
+			this.Column1.HeaderText = "Цена";
+			this.Column1.Name = "Column1";
+			this.Column1.ReadOnly = true;
 			// 
 			// button2
 			// 
@@ -389,101 +476,26 @@
 			this.tabPage2.Text = "Изменить/Удалить сборку";
 			this.tabPage2.UseVisualStyleBackColor = true;
 			// 
-			// complname
+			// label4
 			// 
-			this.complname.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-			this.complname.DataPropertyName = "gc_name";
-			this.complname.HeaderText = "Компонент";
-			this.complname.Name = "complname";
-			this.complname.ReadOnly = true;
-			// 
-			// dataGridViewTextBoxColumn13
-			// 
-			this.dataGridViewTextBoxColumn13.DataPropertyName = "r_count_component";
-			this.dataGridViewTextBoxColumn13.HeaderText = "Количество";
-			this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
-			this.dataGridViewTextBoxColumn13.ReadOnly = true;
-			this.dataGridViewTextBoxColumn13.Width = 110;
-			// 
-			// dataGridViewTextBoxColumn10
-			// 
-			this.dataGridViewTextBoxColumn10.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-			this.dataGridViewTextBoxColumn10.DataPropertyName = "idgas_recipt";
-			this.dataGridViewTextBoxColumn10.HeaderText = "idgas_recipt";
-			this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-			this.dataGridViewTextBoxColumn10.ReadOnly = true;
-			this.dataGridViewTextBoxColumn10.Visible = false;
-			this.dataGridViewTextBoxColumn10.Width = 5;
-			// 
-			// dataGridViewTextBoxColumn11
-			// 
-			this.dataGridViewTextBoxColumn11.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-			this.dataGridViewTextBoxColumn11.DataPropertyName = "id_gas_componenta";
-			this.dataGridViewTextBoxColumn11.HeaderText = "id_gas_componenta";
-			this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
-			this.dataGridViewTextBoxColumn11.ReadOnly = true;
-			this.dataGridViewTextBoxColumn11.Visible = false;
-			this.dataGridViewTextBoxColumn11.Width = 5;
-			// 
-			// dataGridViewTextBoxColumn12
-			// 
-			this.dataGridViewTextBoxColumn12.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-			this.dataGridViewTextBoxColumn12.DataPropertyName = "id_gas_equipt";
-			this.dataGridViewTextBoxColumn12.HeaderText = "id_gas_equipt";
-			this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
-			this.dataGridViewTextBoxColumn12.ReadOnly = true;
-			this.dataGridViewTextBoxColumn12.Visible = false;
-			this.dataGridViewTextBoxColumn12.Width = 5;
-			// 
-			// Column1
-			// 
-			this.Column1.DataPropertyName = "gc_coast";
-			this.Column1.HeaderText = "Цена";
-			this.Column1.Name = "Column1";
-			this.Column1.ReadOnly = true;
-			// 
-			// dataGridViewTextBoxColumn1
-			// 
-			this.dataGridViewTextBoxColumn1.DataPropertyName = "idgas_equipt";
-			this.dataGridViewTextBoxColumn1.HeaderText = "idgas_equipt";
-			this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-			this.dataGridViewTextBoxColumn1.ReadOnly = true;
-			this.dataGridViewTextBoxColumn1.Visible = false;
-			// 
-			// dataGridViewTextBoxColumn2
-			// 
-			this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-			this.dataGridViewTextBoxColumn2.DataPropertyName = "gq_name";
-			this.dataGridViewTextBoxColumn2.HeaderText = "Оборудование";
-			this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-			this.dataGridViewTextBoxColumn2.ReadOnly = true;
-			// 
-			// dataGridViewTextBoxColumn3
-			// 
-			this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-			this.dataGridViewTextBoxColumn3.DataPropertyName = "gq_coast";
-			this.dataGridViewTextBoxColumn3.FillWeight = 75F;
-			this.dataGridViewTextBoxColumn3.HeaderText = "Цена(руб.)";
-			this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-			this.dataGridViewTextBoxColumn3.ReadOnly = true;
-			// 
-			// dataGridViewTextBoxColumn4
-			// 
-			this.dataGridViewTextBoxColumn4.DataPropertyName = "gq_count";
-			this.dataGridViewTextBoxColumn4.HeaderText = "gq_count";
-			this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-			this.dataGridViewTextBoxColumn4.ReadOnly = true;
-			this.dataGridViewTextBoxColumn4.Visible = false;
+			this.label4.AutoSize = true;
+			this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.label4.Location = new System.Drawing.Point(470, 13);
+			this.label4.Name = "label4";
+			this.label4.Size = new System.Drawing.Size(423, 29);
+			this.label4.TabIndex = 17;
+			this.label4.Text = "Выберите оборудования в таблице";
 			// 
 			// EquiptEdit
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.Controls.Add(this.tabControl1);
 			this.Controls.Add(this.label3);
 			this.Controls.Add(this.textBox1);
 			this.Controls.Add(this.button4);
 			this.Controls.Add(this.gas_equiptDataGridView);
+			this.Controls.Add(this.tabControl1);
+			this.Controls.Add(this.label4);
 			this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
 			this.Name = "EquiptEdit";
@@ -552,5 +564,6 @@
 		private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
 		private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
 		private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+		private System.Windows.Forms.Label label4;
 	}
 }
