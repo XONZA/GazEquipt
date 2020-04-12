@@ -72,6 +72,12 @@
     <Compile Include="ComponentCompony.Designer.cs">
       <DependentUpon>ComponentCompony.cs</DependentUpon>
     </Compile>
+    <Compile Include="ComponentPostavka.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ComponentPostavka.Designer.cs">
+      <DependentUpon>ComponentPostavka.cs</DependentUpon>
+    </Compile>
     <Compile Include="ComponentSearch.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -126,6 +132,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ComponentCompony.resx">
       <DependentUpon>ComponentCompony.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComponentPostavka.resx">
+      <DependentUpon>ComponentPostavka.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ComponentSearch.resx">
       <DependentUpon>ComponentSearch.cs</DependentUpon>

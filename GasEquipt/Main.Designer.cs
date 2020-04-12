@@ -45,6 +45,7 @@
 			this.panel3 = new System.Windows.Forms.Panel();
 			this.button5 = new System.Windows.Forms.Button();
 			this.button3 = new System.Windows.Forms.Button();
+			this.button4 = new System.Windows.Forms.Button();
 			this.button2 = new System.Windows.Forms.Button();
 			this.componentCompony1 = new GasEquipt.ComponentCompony();
 			this.cOmponentAdd1 = new GasEquipt.COmponentAdd();
@@ -61,6 +62,7 @@
 			this.component_componyTableAdapter = new GasEquipt.gazmechDataSetTableAdapters.component_componyTableAdapter();
 			this.dragControl1 = new GasEquipt.DragControl();
 			this.dragControl2 = new GasEquipt.DragControl();
+			this.componentPostavka1 = new GasEquipt.ComponentPostavka();
 			this.tabControl1.SuspendLayout();
 			this.tabPage1.SuspendLayout();
 			this.panel2.SuspendLayout();
@@ -223,6 +225,7 @@
 			this.tabPage2.Controls.Add(this.panel3);
 			this.tabPage2.Controls.Add(this.componentCompony1);
 			this.tabPage2.Controls.Add(this.cOmponentAdd1);
+			this.tabPage2.Controls.Add(this.componentPostavka1);
 			this.tabPage2.Location = new System.Drawing.Point(4, 29);
 			this.tabPage2.Name = "tabPage2";
 			this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -246,6 +249,7 @@
 			this.panel3.BackColor = System.Drawing.Color.RoyalBlue;
 			this.panel3.Controls.Add(this.button5);
 			this.panel3.Controls.Add(this.button3);
+			this.panel3.Controls.Add(this.button4);
 			this.panel3.Controls.Add(this.button2);
 			this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
 			this.panel3.Location = new System.Drawing.Point(3, 3);
@@ -261,7 +265,7 @@
 			this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.button5.ForeColor = System.Drawing.SystemColors.Control;
-			this.button5.Location = new System.Drawing.Point(0, 128);
+			this.button5.Location = new System.Drawing.Point(0, 192);
 			this.button5.Name = "button5";
 			this.button5.Size = new System.Drawing.Size(200, 64);
 			this.button5.TabIndex = 4;
@@ -277,13 +281,29 @@
 			this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.button3.ForeColor = System.Drawing.SystemColors.Control;
-			this.button3.Location = new System.Drawing.Point(0, 64);
+			this.button3.Location = new System.Drawing.Point(0, 128);
 			this.button3.Name = "button3";
 			this.button3.Size = new System.Drawing.Size(200, 64);
 			this.button3.TabIndex = 2;
 			this.button3.Text = "Редактирование компонентов";
 			this.button3.UseVisualStyleBackColor = false;
 			this.button3.Click += new System.EventHandler(this.Button3_Click);
+			// 
+			// button4
+			// 
+			this.button4.BackColor = System.Drawing.Color.CornflowerBlue;
+			this.button4.Dock = System.Windows.Forms.DockStyle.Top;
+			this.button4.FlatAppearance.BorderSize = 0;
+			this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.button4.ForeColor = System.Drawing.SystemColors.Control;
+			this.button4.Location = new System.Drawing.Point(0, 64);
+			this.button4.Name = "button4";
+			this.button4.Size = new System.Drawing.Size(200, 64);
+			this.button4.TabIndex = 5;
+			this.button4.Text = "Добавление компонентов";
+			this.button4.UseVisualStyleBackColor = false;
+			this.button4.Click += new System.EventHandler(this.Button4_Click);
 			// 
 			// button2
 			// 
@@ -421,6 +441,16 @@
 			// 
 			this.dragControl2.SelectControl = this.label1;
 			// 
+			// componentPostavka1
+			// 
+			this.componentPostavka1.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.componentPostavka1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			this.componentPostavka1.Location = new System.Drawing.Point(3, 3);
+			this.componentPostavka1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+			this.componentPostavka1.Name = "componentPostavka1";
+			this.componentPostavka1.Size = new System.Drawing.Size(1125, 655);
+			this.componentPostavka1.TabIndex = 4;
+			// 
 			// Main
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -480,6 +510,9 @@
 		private System.Windows.Forms.BindingSource component_componyBindingSource;
 		private gazmechDataSetTableAdapters.component_componyTableAdapter component_componyTableAdapter;
 		private ComponentCompony componentCompony1;
+		private System.Windows.Forms.Button button4;
+		private ComponentPostavka componentPostavka1;
+		//private DragControl dragControl3;
 	}
 }
 

@@ -12,7 +12,7 @@ namespace GasEquipt
 {
 	public partial class EquiptPostavk : UserControl
 	{
-		public int idequip , equipcount, recidcomp, reccount;
+		public int idequip , equipcount, recidcomp, reccount, addcount;
 		public decimal coastequip;
 		public int[] compcount = new int[100];
 		public int[] idcomp = new int[100];
@@ -28,7 +28,7 @@ namespace GasEquipt
 			DataView dv = new DataView(gazmechDataSet.gas_recipt);
 			dv.RowFilter = ("id_gas_equipt = '" + 0 + "' ");
 			gas_reciptDataGridView.DataSource = dv;
-			numericUpDown1.Value = 0;
+			numericUpDown1.Value = 1;
 			this.gas_equiptBindingSource.MoveFirst();
 			button1.Enabled = false;
 		}
@@ -124,7 +124,17 @@ namespace GasEquipt
 				dqv.RowFilter = ("idgas_equipt = '" + idequip + "' ");
 				gas_equiptDataGridView.DataSource = dqv;
 				DataGridViewRow roww = gas_equiptDataGridView.Rows[0];
-				roww.Cells[3].Value = Convert.ToInt32(roww.Cells[3].Value) + Convert.ToInt32(numericUpDown1.Value);
+				addcount = Convert.ToInt32(roww.Cells[3].Value) + Convert.ToInt32(numericUpDown1.Value);
+				roww.Cells[3].Value = addcount;
+				gazmechDataSet.assembl_gas_equiptRow asembl;
+				asembl = gazmechDataSet.assembl_gas_equipt.Newassembl_gas_equiptRow();
+				asembl.idassembl = 0;
+				asembl.id_gas_equipt = idequip;
+				asembl.agq_data = dateTimePicker1.Value;
+				asembl.agq_count = Convert.ToInt32(numericUpDown1.Value);
+				this.gazmechDataSet.assembl_gas_equipt.Rows.Add(asembl);
+				this.assembl_gas_equiptTableAdapter.Update(this.gazmechDataSet.assembl_gas_equipt);
+				this.assembl_gas_equiptTableAdapter.Fill(this.gazmechDataSet.assembl_gas_equipt);
 				gas_equiptDataGridView.DataSource = gazmechDataSet.gas_equipt;
 				this.gas_equiptTableAdapter.Update(this.gazmechDataSet.gas_equipt);
 				this.gas_componentBindingSource.EndEdit();

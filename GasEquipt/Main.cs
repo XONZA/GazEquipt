@@ -139,5 +139,11 @@ namespace GasEquipt
 			equiptAdd1.AddLoad();
 			equiptMains1.EquipMainLoad();
 		}
+
+		private void Button4_Click(object sender, EventArgs e)
+		{
+			componentPostavka1.BringToFront();
+			componentPostavka1.CompPostavkLoad();
+		}
 	}
 }

@@ -31,7 +31,6 @@
 			this.components = new System.ComponentModel.Container();
 			System.Windows.Forms.Label gc_nameLabel;
 			System.Windows.Forms.Label gc_coastLabel;
-			System.Windows.Forms.Label gc_countLabel;
 			System.Windows.Forms.Label co_NameLabel;
 			this.gazmechDataSet = new GasEquipt.gazmechDataSet();
 			this.gas_componentBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -47,7 +46,6 @@
 			this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.gc_nameTextBox = new System.Windows.Forms.TextBox();
 			this.gc_coastTextBox = new System.Windows.Forms.TextBox();
-			this.gc_countNumericUpDown = new System.Windows.Forms.NumericUpDown();
 			this.button1 = new System.Windows.Forms.Button();
 			this.button2 = new System.Windows.Forms.Button();
 			this.button3 = new System.Windows.Forms.Button();
@@ -57,12 +55,10 @@
 			this.cmkeycomponyBindingSource = new System.Windows.Forms.BindingSource(this.components);
 			gc_nameLabel = new System.Windows.Forms.Label();
 			gc_coastLabel = new System.Windows.Forms.Label();
-			gc_countLabel = new System.Windows.Forms.Label();
 			co_NameLabel = new System.Windows.Forms.Label();
 			((System.ComponentModel.ISupportInitialize)(this.gazmechDataSet)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.gas_componentBindingSource)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.gas_componentDataGridView)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.gc_countNumericUpDown)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.component_componyBindingSource)).BeginInit();
 			this.panel1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.cmkeycomponyBindingSource)).BeginInit();
@@ -82,27 +78,17 @@
 			// 
 			gc_coastLabel.AutoSize = true;
 			gc_coastLabel.ForeColor = System.Drawing.SystemColors.Control;
-			gc_coastLabel.Location = new System.Drawing.Point(12, 103);
+			gc_coastLabel.Location = new System.Drawing.Point(12, 160);
 			gc_coastLabel.Name = "gc_coastLabel";
 			gc_coastLabel.Size = new System.Drawing.Size(87, 20);
 			gc_coastLabel.TabIndex = 3;
 			gc_coastLabel.Text = "Цена(руб.)";
 			// 
-			// gc_countLabel
-			// 
-			gc_countLabel.AutoSize = true;
-			gc_countLabel.ForeColor = System.Drawing.SystemColors.Control;
-			gc_countLabel.Location = new System.Drawing.Point(320, 103);
-			gc_countLabel.Name = "gc_countLabel";
-			gc_countLabel.Size = new System.Drawing.Size(100, 20);
-			gc_countLabel.TabIndex = 5;
-			gc_countLabel.Text = "Количество";
-			// 
 			// co_NameLabel
 			// 
 			co_NameLabel.AutoSize = true;
 			co_NameLabel.ForeColor = System.Drawing.SystemColors.Control;
-			co_NameLabel.Location = new System.Drawing.Point(320, 20);
+			co_NameLabel.Location = new System.Drawing.Point(12, 87);
 			co_NameLabel.Name = "co_NameLabel";
 			co_NameLabel.Size = new System.Drawing.Size(131, 20);
 			co_NameLabel.TabIndex = 10;
@@ -215,33 +201,20 @@
 			this.gc_nameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.gas_componentBindingSource, "gc_name", true));
 			this.gc_nameTextBox.Location = new System.Drawing.Point(16, 46);
 			this.gc_nameTextBox.Name = "gc_nameTextBox";
-			this.gc_nameTextBox.Size = new System.Drawing.Size(253, 26);
+			this.gc_nameTextBox.Size = new System.Drawing.Size(570, 26);
 			this.gc_nameTextBox.TabIndex = 2;
 			// 
 			// gc_coastTextBox
 			// 
 			this.gc_coastTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.gas_componentBindingSource, "gc_coast", true));
-			this.gc_coastTextBox.Location = new System.Drawing.Point(16, 126);
+			this.gc_coastTextBox.Location = new System.Drawing.Point(16, 183);
 			this.gc_coastTextBox.Name = "gc_coastTextBox";
-			this.gc_coastTextBox.Size = new System.Drawing.Size(253, 26);
+			this.gc_coastTextBox.Size = new System.Drawing.Size(570, 26);
 			this.gc_coastTextBox.TabIndex = 4;
-			// 
-			// gc_countNumericUpDown
-			// 
-			this.gc_countNumericUpDown.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.gas_componentBindingSource, "gc_count", true));
-			this.gc_countNumericUpDown.Location = new System.Drawing.Point(324, 126);
-			this.gc_countNumericUpDown.Maximum = new decimal(new int[] {
-            100000,
-            0,
-            0,
-            0});
-			this.gc_countNumericUpDown.Name = "gc_countNumericUpDown";
-			this.gc_countNumericUpDown.Size = new System.Drawing.Size(263, 26);
-			this.gc_countNumericUpDown.TabIndex = 7;
 			// 
 			// button1
 			// 
-			this.button1.Location = new System.Drawing.Point(638, 453);
+			this.button1.Location = new System.Drawing.Point(637, 470);
 			this.button1.Name = "button1";
 			this.button1.Size = new System.Drawing.Size(285, 58);
 			this.button1.TabIndex = 8;
@@ -251,7 +224,7 @@
 			// 
 			// button2
 			// 
-			this.button2.Location = new System.Drawing.Point(638, 582);
+			this.button2.Location = new System.Drawing.Point(637, 599);
 			this.button2.Name = "button2";
 			this.button2.Size = new System.Drawing.Size(285, 58);
 			this.button2.TabIndex = 9;
@@ -261,7 +234,7 @@
 			// 
 			// button3
 			// 
-			this.button3.Location = new System.Drawing.Point(638, 517);
+			this.button3.Location = new System.Drawing.Point(637, 534);
 			this.button3.Name = "button3";
 			this.button3.Size = new System.Drawing.Size(285, 58);
 			this.button3.TabIndex = 10;
@@ -283,12 +256,10 @@
 			this.panel1.Controls.Add(this.gc_nameTextBox);
 			this.panel1.Controls.Add(this.gc_coastTextBox);
 			this.panel1.Controls.Add(gc_coastLabel);
-			this.panel1.Controls.Add(gc_countLabel);
-			this.panel1.Controls.Add(this.gc_countNumericUpDown);
 			this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
 			this.panel1.Location = new System.Drawing.Point(0, 439);
 			this.panel1.Name = "panel1";
-			this.panel1.Size = new System.Drawing.Size(632, 230);
+			this.panel1.Size = new System.Drawing.Size(620, 230);
 			this.panel1.TabIndex = 12;
 			// 
 			// component_componyComboBox
@@ -296,9 +267,9 @@
 			this.component_componyComboBox.DataSource = this.component_componyBindingSource;
 			this.component_componyComboBox.DisplayMember = "co_Name";
 			this.component_componyComboBox.FormattingEnabled = true;
-			this.component_componyComboBox.Location = new System.Drawing.Point(324, 44);
+			this.component_componyComboBox.Location = new System.Drawing.Point(16, 111);
 			this.component_componyComboBox.Name = "component_componyComboBox";
-			this.component_componyComboBox.Size = new System.Drawing.Size(263, 28);
+			this.component_componyComboBox.Size = new System.Drawing.Size(570, 28);
 			this.component_componyComboBox.TabIndex = 12;
 			this.component_componyComboBox.ValueMember = "idcomponent_compony";
 			// 
@@ -324,7 +295,6 @@
 			((System.ComponentModel.ISupportInitialize)(this.gazmechDataSet)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.gas_componentBindingSource)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.gas_componentDataGridView)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.gc_countNumericUpDown)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.component_componyBindingSource)).EndInit();
 			this.panel1.ResumeLayout(false);
 			this.panel1.PerformLayout();
@@ -348,7 +318,6 @@
 		private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
 		private System.Windows.Forms.TextBox gc_nameTextBox;
 		private System.Windows.Forms.TextBox gc_coastTextBox;
-		private System.Windows.Forms.NumericUpDown gc_countNumericUpDown;
 		private System.Windows.Forms.Button button1;
 		private System.Windows.Forms.Button button2;
 		private System.Windows.Forms.Button button3;
