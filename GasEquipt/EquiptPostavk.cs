@@ -14,6 +14,7 @@ namespace GasEquipt
 	{
 		public int idequip , equipcount, recidcomp, reccount, addcount;
 		public decimal coastequip;
+		public string nameequp;
 		public int[] compcount = new int[100];
 		public int[] idcomp = new int[100];
 
@@ -84,12 +85,14 @@ namespace GasEquipt
 		{
 			//Сборка оборудования по компонентам 
 			int i = 0, q;
+
 			// проверка достаточно ли элементов на складе
 			for (; i < gas_reciptDataGridView.Rows.Count; i++)
 				{
 				// Взятие данных о компонентах которые нужно отнять и какое количество нужно отнять
-					DataGridViewRow row = gas_reciptDataGridView.Rows[i];
-					reccount = Convert.ToInt32(row.Cells[4].Value) * Convert.ToInt32(numericUpDown1.Value);
+				DataGridViewRow row = gas_reciptDataGridView.Rows[i];
+
+				reccount = Convert.ToInt32(row.Cells[4].Value) * Convert.ToInt32(numericUpDown1.Value);
 					idcomp[i] = Convert.ToInt32(row.Cells[1].Value);
 					DataView dv = new DataView(gazmechDataSet.gas_component);
 					dv.RowFilter = ("idgas_component = '" + idcomp[i] + "' ");
@@ -112,6 +115,8 @@ namespace GasEquipt
 				{
 					for (int x = 0; x < gas_reciptDataGridView.Rows.Count ; x++)
 					{
+						DataGridViewRow row = gas_reciptDataGridView.Rows[x];
+
 						q = idcomp[x];
 						DataView dv = new DataView(gazmechDataSet.gas_component);
 						dv.RowFilter = ("idgas_component = '" + q + "' ");
@@ -119,10 +124,25 @@ namespace GasEquipt
 						DataGridViewRow comrow = gas_componentDataGridView.Rows[0];
 						comrow.Cells[4].Value = Convert.ToInt32(compcount[x]);
 						gas_componentDataGridView.DataSource = gazmechDataSet.gas_component;
-				}
+
+						gazmechDataSet.craftitemsreportRow cri;
+						cri = gazmechDataSet.craftitemsreport.NewcraftitemsreportRow();
+						cri.idcip = 0;
+						cri.Compon = row.Cells[3].Value.ToString();
+						cri.Equipt = nameequp;
+						cri.idComp = Convert.ToInt32(numericUpDown1.Value);
+						cri.idEquip = Convert.ToInt32(row.Cells[2].Value);
+						cri.count = Convert.ToInt32(numericUpDown1.Value) * Convert.ToInt32(row.Cells[4].Value);
+						cri.craftdate = dateTimePicker1.Value;
+						this.gazmechDataSet.craftitemsreport.Rows.Add(cri);
+						this.craftitemsreportTableAdapter.Update(this.gazmechDataSet.craftitemsreport);
+						this.craftitemsreportTableAdapter.Fill(this.gazmechDataSet.craftitemsreport);
+					}
+
 				DataView dqv = new DataView(gazmechDataSet.gas_equipt);
 				dqv.RowFilter = ("idgas_equipt = '" + idequip + "' ");
 				gas_equiptDataGridView.DataSource = dqv;
+
 				DataGridViewRow roww = gas_equiptDataGridView.Rows[0];
 				addcount = Convert.ToInt32(roww.Cells[3].Value) + Convert.ToInt32(numericUpDown1.Value);
 				roww.Cells[3].Value = addcount;
@@ -131,6 +151,8 @@ namespace GasEquipt
 				asembl.idassembl = 0;
 				asembl.id_gas_equipt = idequip;
 				asembl.agq_data = dateTimePicker1.Value;
+
+				
 				asembl.agq_count = Convert.ToInt32(numericUpDown1.Value);
 				this.gazmechDataSet.assembl_gas_equipt.Rows.Add(asembl);
 				this.assembl_gas_equiptTableAdapter.Update(this.gazmechDataSet.assembl_gas_equipt);
@@ -138,8 +160,8 @@ namespace GasEquipt
 				gas_equiptDataGridView.DataSource = gazmechDataSet.gas_equipt;
 				this.gas_equiptTableAdapter.Update(this.gazmechDataSet.gas_equipt);
 				this.gas_componentBindingSource.EndEdit();
-				this.gas_componentTableAdapter.Update(this.gazmechDataSet.gas_component);
-			}
+					this.gas_componentTableAdapter.Update(this.gazmechDataSet.gas_component);
+				}
 			//this.gas_equiptBindingSource.EndEdit();
 			//gas_componentDataGridView.DataSource = gazmechDataSet.gas_component;
 
@@ -161,6 +183,7 @@ namespace GasEquipt
 		{
 			DataGridViewRow roww = gas_equiptDataGridView.CurrentRow;
 			idequip = Convert.ToInt32(roww.Cells[0].Value);
+			nameequp = roww.Cells[1].Value.ToString();
 			equipcount = Convert.ToInt32(roww.Cells[3].Value);
 			DataView dv = new DataView(gazmechDataSet.gas_recipt);
 			dv.RowFilter = ("id_gas_equipt = '" + idequip + "' ");

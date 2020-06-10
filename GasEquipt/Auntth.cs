@@ -39,8 +39,6 @@ namespace GasEquipt
 					MessageBox.Show("Неверный логин или пароль");
 				}
 			}
-
-
 		}
 
 		private void Auntth_FormClosed(object sender, FormClosedEventArgs e)

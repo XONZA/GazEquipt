@@ -47,6 +47,7 @@
 			this.gq_nameTextBox = new System.Windows.Forms.TextBox();
 			this.button1 = new System.Windows.Forms.Button();
 			this.panel1 = new System.Windows.Forms.Panel();
+			this.button3 = new System.Windows.Forms.Button();
 			((System.ComponentModel.ISupportInitialize)(this.gazmechDataSet)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.gas_equiptBindingSource)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.gas_equiptDataGridView)).BeginInit();
@@ -72,6 +73,7 @@
 			this.tableAdapterManager.assembl_gas_equiptTableAdapter = null;
 			this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
 			this.tableAdapterManager.component_componyTableAdapter = null;
+			this.tableAdapterManager.craftitemsreportTableAdapter = null;
 			this.tableAdapterManager.gas_component_admissionTableAdapter = null;
 			this.tableAdapterManager.gas_componentTableAdapter = null;
 			this.tableAdapterManager.gas_equiptTableAdapter = this.gas_equiptTableAdapter;
@@ -212,9 +214,9 @@
 			this.button1.BackColor = System.Drawing.Color.RoyalBlue;
 			this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.button1.ForeColor = System.Drawing.SystemColors.Control;
-			this.button1.Location = new System.Drawing.Point(19, 99);
+			this.button1.Location = new System.Drawing.Point(19, 87);
 			this.button1.Name = "button1";
-			this.button1.Size = new System.Drawing.Size(268, 71);
+			this.button1.Size = new System.Drawing.Size(268, 44);
 			this.button1.TabIndex = 11;
 			this.button1.Text = "Сменить название";
 			this.button1.UseVisualStyleBackColor = false;
@@ -223,6 +225,7 @@
 			// panel1
 			// 
 			this.panel1.BackColor = System.Drawing.Color.RoyalBlue;
+			this.panel1.Controls.Add(this.button3);
 			this.panel1.Controls.Add(this.gq_nameTextBox);
 			this.panel1.Controls.Add(this.button1);
 			this.panel1.Controls.Add(this.label3);
@@ -230,6 +233,19 @@
 			this.panel1.Name = "panel1";
 			this.panel1.Size = new System.Drawing.Size(311, 190);
 			this.panel1.TabIndex = 12;
+			// 
+			// button3
+			// 
+			this.button3.BackColor = System.Drawing.Color.RoyalBlue;
+			this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.button3.ForeColor = System.Drawing.SystemColors.Control;
+			this.button3.Location = new System.Drawing.Point(19, 137);
+			this.button3.Name = "button3";
+			this.button3.Size = new System.Drawing.Size(268, 33);
+			this.button3.TabIndex = 12;
+			this.button3.Text = "Удалить";
+			this.button3.UseVisualStyleBackColor = false;
+			this.button3.Click += new System.EventHandler(this.Button3_Click);
 			// 
 			// EquiptMains
 			// 
@@ -278,5 +294,6 @@
 		private System.Windows.Forms.TextBox gq_nameTextBox;
 		private System.Windows.Forms.Button button1;
 		private System.Windows.Forms.Panel panel1;
+		private System.Windows.Forms.Button button3;
 	}
 }

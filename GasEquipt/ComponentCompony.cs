@@ -35,9 +35,8 @@ namespace GasEquipt
 		{
 			if (check == true)
 			{
-				DataView dv = new DataView(gazmechDataSet.component_compony);
-				dv.RowFilter = ("co_Name LIKE '" + textBox1.Text + "%' ");
-				component_componyDataGridView.DataSource = dv;
+			
+				component_componyBindingSource.Filter = ("co_Name LIKE '" + textBox1.Text + "%' ");
 				button4.Text = "Сбросить фильтр";
 				check = false;
 			}
@@ -46,7 +45,7 @@ namespace GasEquipt
 				check = true;
 				button4.Text = "Поиск";
 				textBox1.Text = "";
-				component_componyDataGridView.DataSource = gazmechDataSet.component_compony;
+				component_componyBindingSource.Filter = "";
 			}
 		}
 
@@ -81,7 +80,6 @@ namespace GasEquipt
 			gazmechDataSet.component_compony.Rows.Add(row);
 			this.component_componyTableAdapter.Update(this.gazmechDataSet.component_compony);
 			this.component_componyTableAdapter.Fill(this.gazmechDataSet.component_compony);
-			this.component_componyDataGridView.DataSource = gazmechDataSet.component_compony;
 			this.component_componyBindingSource.MoveLast();
 		}
 

@@ -74,8 +74,16 @@ namespace GasEquipt
 
 		private void EquiptMains_VisibleChanged(object sender, EventArgs e)
 		{
-			this.gas_equiptTableAdapter.Fill(this.gazmechDataSet.gas_equipt);
-			x = true;
+			try
+			{
+				this.gas_equiptTableAdapter.Fill(this.gazmechDataSet.gas_equipt);
+				x = true;
+			}
+			catch (Exception)
+			{
+				MessageBox.Show("База данных не обноружено!");
+				Application.Exit();
+			}
 		}
 
 		private void Button1_Click(object sender, EventArgs e)
@@ -83,6 +91,21 @@ namespace GasEquipt
 			this.Validate();
 			this.gas_equiptBindingSource.EndEdit();
 			this.gas_equiptTableAdapter.Update(this.gazmechDataSet);
+		}
+
+		private void Button3_Click(object sender, EventArgs e)
+		{
+			string message = "Вы действительно хотите удалить запись занятия? Вместе с записью удалятся все оценки и пропуски по данному занятию.";
+			string caption = "Error Detected in Input";
+			MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+			DialogResult result;
+			result = MessageBox.Show(message, caption, buttons);
+			if (result == System.Windows.Forms.DialogResult.Yes)
+			{
+				this.gas_equiptDataGridView.Rows.RemoveAt(gas_equiptDataGridView.CurrentRow.Index);
+				this.gas_equiptBindingSource.EndEdit();
+				this.gas_equiptTableAdapter.Update(this.gazmechDataSet.gas_equipt);
+			}
 		}
 	}
 }

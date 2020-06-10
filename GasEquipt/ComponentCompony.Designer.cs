@@ -45,9 +45,9 @@
 			this.co_AdressTextBox = new System.Windows.Forms.TextBox();
 			this.co_NumberTextBox = new System.Windows.Forms.TextBox();
 			this.panel1 = new System.Windows.Forms.Panel();
-			this.button1 = new System.Windows.Forms.Button();
-			this.button2 = new System.Windows.Forms.Button();
 			this.button3 = new System.Windows.Forms.Button();
+			this.button2 = new System.Windows.Forms.Button();
+			this.button1 = new System.Windows.Forms.Button();
 			this.label1 = new System.Windows.Forms.Label();
 			this.button4 = new System.Windows.Forms.Button();
 			this.textBox1 = new System.Windows.Forms.TextBox();
@@ -60,6 +60,36 @@
 			((System.ComponentModel.ISupportInitialize)(this.component_componyDataGridView)).BeginInit();
 			this.panel1.SuspendLayout();
 			this.SuspendLayout();
+			// 
+			// co_NameLabel
+			// 
+			co_NameLabel.AutoSize = true;
+			co_NameLabel.ForeColor = System.Drawing.SystemColors.Control;
+			co_NameLabel.Location = new System.Drawing.Point(13, 18);
+			co_NameLabel.Name = "co_NameLabel";
+			co_NameLabel.Size = new System.Drawing.Size(206, 20);
+			co_NameLabel.TabIndex = 1;
+			co_NameLabel.Text = "Название производителя";
+			// 
+			// co_AdressLabel
+			// 
+			co_AdressLabel.AutoSize = true;
+			co_AdressLabel.ForeColor = System.Drawing.SystemColors.Control;
+			co_AdressLabel.Location = new System.Drawing.Point(13, 145);
+			co_AdressLabel.Name = "co_AdressLabel";
+			co_AdressLabel.Size = new System.Drawing.Size(57, 20);
+			co_AdressLabel.TabIndex = 3;
+			co_AdressLabel.Text = "Адрес";
+			// 
+			// co_NumberLabel
+			// 
+			co_NumberLabel.AutoSize = true;
+			co_NumberLabel.ForeColor = System.Drawing.SystemColors.Control;
+			co_NumberLabel.Location = new System.Drawing.Point(13, 80);
+			co_NumberLabel.Name = "co_NumberLabel";
+			co_NumberLabel.Size = new System.Drawing.Size(59, 20);
+			co_NumberLabel.TabIndex = 5;
+			co_NumberLabel.Text = "Номер";
 			// 
 			// gazmechDataSet
 			// 
@@ -80,6 +110,7 @@
 			this.tableAdapterManager.assembl_gas_equiptTableAdapter = null;
 			this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
 			this.tableAdapterManager.component_componyTableAdapter = this.component_componyTableAdapter;
+			this.tableAdapterManager.craftitemsreportTableAdapter = null;
 			this.tableAdapterManager.gas_component_admissionTableAdapter = null;
 			this.tableAdapterManager.gas_componentTableAdapter = null;
 			this.tableAdapterManager.gas_equiptTableAdapter = null;
@@ -140,16 +171,6 @@
 			this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
 			this.dataGridViewTextBoxColumn4.ReadOnly = true;
 			// 
-			// co_NameLabel
-			// 
-			co_NameLabel.AutoSize = true;
-			co_NameLabel.ForeColor = System.Drawing.SystemColors.Control;
-			co_NameLabel.Location = new System.Drawing.Point(13, 18);
-			co_NameLabel.Name = "co_NameLabel";
-			co_NameLabel.Size = new System.Drawing.Size(206, 20);
-			co_NameLabel.TabIndex = 1;
-			co_NameLabel.Text = "Название производителя";
-			// 
 			// co_NameTextBox
 			// 
 			this.co_NameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.component_componyBindingSource, "co_Name", true));
@@ -158,16 +179,6 @@
 			this.co_NameTextBox.Size = new System.Drawing.Size(317, 26);
 			this.co_NameTextBox.TabIndex = 2;
 			// 
-			// co_AdressLabel
-			// 
-			co_AdressLabel.AutoSize = true;
-			co_AdressLabel.ForeColor = System.Drawing.SystemColors.Control;
-			co_AdressLabel.Location = new System.Drawing.Point(13, 145);
-			co_AdressLabel.Name = "co_AdressLabel";
-			co_AdressLabel.Size = new System.Drawing.Size(57, 20);
-			co_AdressLabel.TabIndex = 3;
-			co_AdressLabel.Text = "Адрес";
-			// 
 			// co_AdressTextBox
 			// 
 			this.co_AdressTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.component_componyBindingSource, "co_Adress", true));
@@ -175,16 +186,6 @@
 			this.co_AdressTextBox.Name = "co_AdressTextBox";
 			this.co_AdressTextBox.Size = new System.Drawing.Size(317, 26);
 			this.co_AdressTextBox.TabIndex = 4;
-			// 
-			// co_NumberLabel
-			// 
-			co_NumberLabel.AutoSize = true;
-			co_NumberLabel.ForeColor = System.Drawing.SystemColors.Control;
-			co_NumberLabel.Location = new System.Drawing.Point(13, 80);
-			co_NumberLabel.Name = "co_NumberLabel";
-			co_NumberLabel.Size = new System.Drawing.Size(59, 20);
-			co_NumberLabel.TabIndex = 5;
-			co_NumberLabel.Text = "Номер";
 			// 
 			// co_NumberTextBox
 			// 
@@ -212,25 +213,25 @@
 			this.panel1.Size = new System.Drawing.Size(533, 252);
 			this.panel1.TabIndex = 7;
 			// 
-			// button1
+			// button3
 			// 
-			this.button1.BackColor = System.Drawing.Color.CornflowerBlue;
-			this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.button1.ForeColor = System.Drawing.SystemColors.Control;
-			this.button1.Location = new System.Drawing.Point(368, 6);
-			this.button1.Name = "button1";
-			this.button1.Size = new System.Drawing.Size(162, 68);
-			this.button1.TabIndex = 8;
-			this.button1.Text = "Добавить";
-			this.button1.UseVisualStyleBackColor = false;
-			this.button1.Click += new System.EventHandler(this.Button1_Click);
+			this.button3.BackColor = System.Drawing.Color.CornflowerBlue;
+			this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.button3.ForeColor = System.Drawing.SystemColors.Control;
+			this.button3.Location = new System.Drawing.Point(368, 168);
+			this.button3.Name = "button3";
+			this.button3.Size = new System.Drawing.Size(162, 68);
+			this.button3.TabIndex = 10;
+			this.button3.Text = "Удалить";
+			this.button3.UseVisualStyleBackColor = false;
+			this.button3.Click += new System.EventHandler(this.Button3_Click);
 			// 
 			// button2
 			// 
 			this.button2.BackColor = System.Drawing.Color.CornflowerBlue;
 			this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.button2.ForeColor = System.Drawing.SystemColors.Control;
-			this.button2.Location = new System.Drawing.Point(368, 80);
+			this.button2.Location = new System.Drawing.Point(368, 94);
 			this.button2.Name = "button2";
 			this.button2.Size = new System.Drawing.Size(162, 68);
 			this.button2.TabIndex = 9;
@@ -238,18 +239,18 @@
 			this.button2.UseVisualStyleBackColor = false;
 			this.button2.Click += new System.EventHandler(this.Button2_Click);
 			// 
-			// button3
+			// button1
 			// 
-			this.button3.BackColor = System.Drawing.Color.CornflowerBlue;
-			this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.button3.ForeColor = System.Drawing.SystemColors.Control;
-			this.button3.Location = new System.Drawing.Point(368, 154);
-			this.button3.Name = "button3";
-			this.button3.Size = new System.Drawing.Size(162, 68);
-			this.button3.TabIndex = 10;
-			this.button3.Text = "Удалить";
-			this.button3.UseVisualStyleBackColor = false;
-			this.button3.Click += new System.EventHandler(this.Button3_Click);
+			this.button1.BackColor = System.Drawing.Color.CornflowerBlue;
+			this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.button1.ForeColor = System.Drawing.SystemColors.Control;
+			this.button1.Location = new System.Drawing.Point(368, 18);
+			this.button1.Name = "button1";
+			this.button1.Size = new System.Drawing.Size(162, 68);
+			this.button1.TabIndex = 8;
+			this.button1.Text = "Добавить";
+			this.button1.UseVisualStyleBackColor = false;
+			this.button1.Click += new System.EventHandler(this.Button1_Click);
 			// 
 			// label1
 			// 

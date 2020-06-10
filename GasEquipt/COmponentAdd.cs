@@ -85,8 +85,6 @@ namespace GasEquipt
 			gazmechDataSet.gas_component.Rows.Add(row);
 			this.gas_componentTableAdapter.Update(this.gazmechDataSet.gas_component);
 			this.gas_componentTableAdapter.FillByCompany(this.gazmechDataSet.gas_component);
-			this.gas_componentDataGridView.DataSource = gazmechDataSet.gas_component;
-			this.gas_componentBindingSource.MoveFirst();
 		}
 	}
 }

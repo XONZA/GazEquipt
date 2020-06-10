@@ -145,5 +145,17 @@ namespace GasEquipt
 			componentPostavka1.BringToFront();
 			componentPostavka1.CompPostavkLoad();
 		}
+
+		private void Button6_Click(object sender, EventArgs e)
+		{
+			reportEquipt1.BringToFront();
+			reportEquipt1.ReportEquiptLoad();
+		}
+
+		private void Button7_Click(object sender, EventArgs e)
+		{
+			reportComponent1.BringToFront();
+			reportComponent1.ReportCompLoad();
+		}
 	}
 }

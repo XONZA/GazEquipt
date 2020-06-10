@@ -59,7 +59,18 @@
               <Mapping SourceColumn="agq_data" DataSetColumn="agq_data" />
               <Mapping SourceColumn="agq_count" DataSetColumn="agq_count" />
             </Mappings>
-            <Sources />
+            <Sources>
+              <DbSource ConnectionRef="gazmechConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="ReportEquipt" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy" GeneratorSourceName="ReportEquipt" GetMethodModifier="Public" GetMethodName="GetDataBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="ReportEquipt">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT     assembl_gas_equipt.idassembl, assembl_gas_equipt.id_gas_equipt, assembl_gas_equipt.agq_data, assembl_gas_equipt.agq_count, gas_equipt.gq_name
+FROM         assembl_gas_equipt INNER JOIN
+                      gas_equipt ON assembl_gas_equipt.id_gas_equipt = gas_equipt.idgas_equipt</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="component_componyTableAdapter" GeneratorDataComponentClassName="component_componyTableAdapter" Name="component_compony" UserDataComponentName="component_componyTableAdapter">
             <MainSource>
@@ -247,7 +258,19 @@ ORDER BY gas_component.idgas_component</CommandText>
               <Mapping SourceColumn="gca_count" DataSetColumn="gca_count" />
               <Mapping SourceColumn="gca_date" DataSetColumn="gca_date" />
             </Mappings>
-            <Sources />
+            <Sources>
+              <DbSource ConnectionRef="gazmechConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillReport" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy" GeneratorSourceName="FillReport" GetMethodModifier="Public" GetMethodName="GetDataBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillReport">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT     gas_component_admission.idgas_component_admission, gas_component_admission.id_gas_component, gas_component_admission.gca_count, 
+                      gas_component_admission.gca_date, gas_component.gc_name
+FROM         gas_component_admission INNER JOIN
+                      gas_component ON gas_component_admission.id_gas_component = gas_component.idgas_component</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="gas_equiptTableAdapter" GeneratorDataComponentClassName="gas_equiptTableAdapter" Name="gas_equipt" UserDataComponentName="gas_equiptTableAdapter">
             <MainSource>
@@ -429,6 +452,99 @@ FROM         gas_recipt INNER JOIN
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="craftitemsreportTableAdapter" GeneratorDataComponentClassName="craftitemsreportTableAdapter" Name="craftitemsreport" UserDataComponentName="craftitemsreportTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="gazmechConnectionString (Settings)" DbObjectName="gazmech.craftitemsreport" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM `craftitemsreport` WHERE ((`idcip` = @p1) AND ((@p2 = 1 AND `Compon` IS NULL) OR (`Compon` = @p3)) AND ((@p4 = 1 AND `Equipt` IS NULL) OR (`Equipt` = @p5)) AND ((@p6 = 1 AND `idComp` IS NULL) OR (`idComp` = @p7)) AND ((@p8 = 1 AND `idEquip` IS NULL) OR (`idEquip` = @p9)) AND ((@p10 = 1 AND `count` IS NULL) OR (`count` = @p11)) AND ((@p12 = 1 AND `craftdate` IS NULL) OR (`craftdate` = @p13)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p1" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="idcip" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p2" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="Compon" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p3" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Compon" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p4" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="Equipt" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p5" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Equipt" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p6" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="idComp" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p7" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="idComp" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p8" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="idEquip" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p9" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="idEquip" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p10" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="count" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p11" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="count" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p12" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="craftdate" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@p13" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="craftdate" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO `craftitemsreport` (`Compon`, `Equipt`, `idComp`, `idEquip`, `count`, `craftdate`) VALUES (@p1, @p2, @p3, @p4, @p5, @p6)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p1" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Compon" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p2" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Equipt" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p3" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="idComp" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p4" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="idEquip" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p5" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="count" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@p6" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="craftdate" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `idcip`, `Compon`, `Equipt`, `idComp`, `idEquip`, `count`, `craftdate` FROM `craftitemsreport`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE `craftitemsreport` SET `Compon` = @p1, `Equipt` = @p2, `idComp` = @p3, `idEquip` = @p4, `count` = @p5, `craftdate` = @p6 WHERE ((`idcip` = @p7) AND ((@p8 = 1 AND `Compon` IS NULL) OR (`Compon` = @p9)) AND ((@p10 = 1 AND `Equipt` IS NULL) OR (`Equipt` = @p11)) AND ((@p12 = 1 AND `idComp` IS NULL) OR (`idComp` = @p13)) AND ((@p14 = 1 AND `idEquip` IS NULL) OR (`idEquip` = @p15)) AND ((@p16 = 1 AND `count` IS NULL) OR (`count` = @p17)) AND ((@p18 = 1 AND `craftdate` IS NULL) OR (`craftdate` = @p19)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p1" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Compon" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p2" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Equipt" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p3" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="idComp" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p4" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="idEquip" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p5" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="count" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@p6" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="craftdate" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p7" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="idcip" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p8" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="Compon" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p9" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Compon" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p10" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="Equipt" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p11" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Equipt" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p12" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="idComp" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p13" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="idComp" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p14" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="idEquip" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p15" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="idEquip" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p16" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="count" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p17" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="count" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p18" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="craftdate" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@p19" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="craftdate" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="idcip" DataSetColumn="idcip" />
+              <Mapping SourceColumn="Compon" DataSetColumn="Compon" />
+              <Mapping SourceColumn="Equipt" DataSetColumn="Equipt" />
+              <Mapping SourceColumn="idComp" DataSetColumn="idComp" />
+              <Mapping SourceColumn="idEquip" DataSetColumn="idEquip" />
+              <Mapping SourceColumn="count" DataSetColumn="count" />
+              <Mapping SourceColumn="craftdate" DataSetColumn="craftdate" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="gazmechConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillReport" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataBy" GeneratorSourceName="FillReport" GetMethodModifier="Public" GetMethodName="GetDataBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillReport">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        craftitemsreport.idcip, craftitemsreport.Compon, craftitemsreport.Equipt, craftitemsreport.idComp, craftitemsreport.idEquip, craftitemsreport.`count`, 
+                         craftitemsreport.craftdate, gas_equipt.idgas_equipt, gas_equipt.gq_name
+FROM            craftitemsreport INNER JOIN
+                         gas_equipt ON craftitemsreport.idEquip = gas_equipt.idgas_equipt</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
@@ -549,6 +665,50 @@ FROM         gas_recipt INNER JOIN
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="CraftItemsReport" msprop:Generator_TableClassName="CraftItemsReportDataTable" msprop:Generator_TableVarName="tableCraftItemsReport" msprop:Generator_TablePropName="CraftItemsReport" msprop:Generator_RowDeletingName="CraftItemsReportRowDeleting" msprop:Generator_RowChangingName="CraftItemsReportRowChanging" msprop:Generator_RowEvHandlerName="CraftItemsReportRowChangeEventHandler" msprop:Generator_RowDeletedName="CraftItemsReportRowDeleted" msprop:Generator_UserTableName="CraftItemsReport" msprop:Generator_RowChangedName="CraftItemsReportRowChanged" msprop:Generator_RowEvArgName="CraftItemsReportRowChangeEvent" msprop:Generator_RowClassName="CraftItemsReportRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="idcip" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnidcip" msprop:Generator_ColumnPropNameInRow="idcip" msprop:Generator_ColumnPropNameInTable="idcipColumn" msprop:Generator_UserColumnName="idcip" type="xs:int" minOccurs="0" />
+              <xs:element name="Compon" msprop:Generator_ColumnVarNameInTable="columnCompon" msprop:Generator_ColumnPropNameInRow="Compon" msprop:Generator_ColumnPropNameInTable="ComponColumn" msprop:Generator_UserColumnName="Compon" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Equipt" msprop:Generator_ColumnVarNameInTable="columnEquipt" msprop:Generator_ColumnPropNameInRow="Equipt" msprop:Generator_ColumnPropNameInTable="EquiptColumn" msprop:Generator_UserColumnName="Equipt" type="xs:string" minOccurs="0" />
+              <xs:element name="idComp" msprop:Generator_ColumnVarNameInTable="columnidComp" msprop:Generator_ColumnPropNameInRow="idComp" msprop:Generator_ColumnPropNameInTable="idCompColumn" msprop:Generator_UserColumnName="idComp" type="xs:int" minOccurs="0" />
+              <xs:element name="idEquip" msprop:Generator_ColumnVarNameInTable="columnidEquip" msprop:Generator_ColumnPropNameInRow="idEquip" msprop:Generator_ColumnPropNameInTable="idEquipColumn" msprop:Generator_UserColumnName="idEquip" type="xs:int" minOccurs="0" />
+              <xs:element name="count" msprop:Generator_ColumnVarNameInTable="columncount" msprop:Generator_ColumnPropNameInRow="count" msprop:Generator_ColumnPropNameInTable="countColumn" msprop:Generator_UserColumnName="count" type="xs:int" minOccurs="0" />
+              <xs:element name="craftdate" msprop:Generator_ColumnVarNameInTable="columncraftdate" msprop:Generator_ColumnPropNameInRow="craftdate" msprop:Generator_ColumnPropNameInTable="craftdateColumn" msprop:Generator_UserColumnName="craftdate" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="craftitemsreport" msprop:Generator_TableClassName="craftitemsreportDataTable" msprop:Generator_TableVarName="tablecraftitemsreport" msprop:Generator_RowChangedName="craftitemsreportRowChanged" msprop:Generator_TablePropName="craftitemsreport" msprop:Generator_RowDeletingName="craftitemsreportRowDeleting" msprop:Generator_RowChangingName="craftitemsreportRowChanging" msprop:Generator_RowEvHandlerName="craftitemsreportRowChangeEventHandler" msprop:Generator_RowDeletedName="craftitemsreportRowDeleted" msprop:Generator_RowClassName="craftitemsreportRow" msprop:Generator_UserTableName="craftitemsreport" msprop:Generator_RowEvArgName="craftitemsreportRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="idcip" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnidcip" msprop:Generator_ColumnPropNameInRow="idcip" msprop:Generator_ColumnPropNameInTable="idcipColumn" msprop:Generator_UserColumnName="idcip" type="xs:int" />
+              <xs:element name="Compon" msprop:Generator_ColumnVarNameInTable="columnCompon" msprop:Generator_ColumnPropNameInRow="Compon" msprop:Generator_ColumnPropNameInTable="ComponColumn" msprop:Generator_UserColumnName="Compon" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="75" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Equipt" msprop:Generator_ColumnVarNameInTable="columnEquipt" msprop:Generator_ColumnPropNameInRow="Equipt" msprop:Generator_ColumnPropNameInTable="EquiptColumn" msprop:Generator_UserColumnName="Equipt" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="75" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="idComp" msprop:Generator_ColumnVarNameInTable="columnidComp" msprop:Generator_ColumnPropNameInRow="idComp" msprop:Generator_ColumnPropNameInTable="idCompColumn" msprop:Generator_UserColumnName="idComp" type="xs:int" minOccurs="0" />
+              <xs:element name="idEquip" msprop:Generator_ColumnVarNameInTable="columnidEquip" msprop:Generator_ColumnPropNameInRow="idEquip" msprop:Generator_ColumnPropNameInTable="idEquipColumn" msprop:Generator_UserColumnName="idEquip" type="xs:int" minOccurs="0" />
+              <xs:element name="count" msprop:Generator_ColumnVarNameInTable="columncount" msprop:Generator_ColumnPropNameInRow="count" msprop:Generator_ColumnPropNameInTable="countColumn" msprop:Generator_UserColumnName="count" type="xs:int" minOccurs="0" />
+              <xs:element name="craftdate" msprop:Generator_ColumnVarNameInTable="columncraftdate" msprop:Generator_ColumnPropNameInRow="craftdate" msprop:Generator_ColumnPropNameInTable="craftdateColumn" msprop:Generator_UserColumnName="craftdate" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:choice>
     </xs:complexType>
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
@@ -578,6 +738,14 @@ FROM         gas_recipt INNER JOIN
     <xs:unique name="login_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:login" />
       <xs:field xpath="mstns:idlogin" />
+    </xs:unique>
+    <xs:unique name="CraftItemsReportKey1">
+      <xs:selector xpath=".//mstns:CraftItemsReport" />
+      <xs:field xpath="mstns:idcip" />
+    </xs:unique>
+    <xs:unique name="craftitemsreport_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:craftitemsreport" />
+      <xs:field xpath="mstns:idcip" />
     </xs:unique>
   </xs:element>
   <xs:annotation>

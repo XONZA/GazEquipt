@@ -19,7 +19,7 @@ namespace GasEquipt
 		{
 			this.gas_reciptTableAdapter.Fill(this.gazmechDataSet.gas_recipt);
 			this.gas_componentTableAdapter.Fill(this.gazmechDataSet.gas_component);
-
+			coast = 0;
 		}
 		public EquiptAdd()
 		{
@@ -43,7 +43,7 @@ namespace GasEquipt
 				gas_Recipt.idgas_recipt = 0;
 				gas_Recipt.id_gas_equipt = gas_idequip;
 				DataGridViewRow roww = gas_componentDataGridView.CurrentRow;
-				gas_Recipt.id_gas_componenta = Convert.ToInt32(roww.Cells[0].Value);
+				gas_Recipt.id_gas_componenta = Convert.ToInt32(roww.Cells[4].Value);
 				coast += Convert.ToDecimal(Convert.ToDecimal(roww.Cells[2].Value)) * (Convert.ToInt32(numericUpDown1.Value));
 				gq_coastTextBox.Text = Convert.ToString(coast);
 				gas_Recipt.r_count_component = Convert.ToInt32(numericUpDown1.Value);
@@ -88,10 +88,13 @@ namespace GasEquipt
 		}
 
 		private void Button2_Click(object sender, EventArgs e)
-		{		
+		{
+			this.gas_reciptTableAdapter.Fill(this.gazmechDataSet.gas_recipt);
+			this.gas_componentTableAdapter.Fill(this.gazmechDataSet.gas_component);
 			panel1.Visible = true;
 			button1.Enabled = true;
 			eqa_boxname.Text = "";
+			coast = 0;
 		}
 	}
 }

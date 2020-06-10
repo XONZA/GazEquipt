@@ -63,6 +63,24 @@
 			this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
 			this.assembl_gas_equiptBindingSource = new System.Windows.Forms.BindingSource(this.components);
 			this.assembl_gas_equiptTableAdapter = new GasEquipt.gazmechDataSetTableAdapters.assembl_gas_equiptTableAdapter();
+			this.craftItemsReportBindingSource = new System.Windows.Forms.BindingSource(this.components);
+			this.craftItemsReportDataGridView = new System.Windows.Forms.DataGridView();
+			this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.craftdate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.craftitemsreportTableAdapter = new GasEquipt.gazmechDataSetTableAdapters.craftitemsreportTableAdapter();
+			this.craftitemsreportDataGridView1 = new System.Windows.Forms.DataGridView();
+			this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.dataGridViewTextBoxColumn22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.dataGridViewTextBoxColumn23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.dataGridViewTextBoxColumn24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.dataGridViewTextBoxColumn25 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.dataGridViewTextBoxColumn26 = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			((System.ComponentModel.ISupportInitialize)(this.gazmechDataSet)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.gas_equiptBindingSource)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.gas_equiptDataGridView)).BeginInit();
@@ -72,6 +90,9 @@
 			((System.ComponentModel.ISupportInitialize)(this.gas_componentDataGridView)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.assembl_gas_equiptBindingSource)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.craftItemsReportBindingSource)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.craftItemsReportDataGridView)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.craftitemsreportDataGridView1)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// gazmechDataSet
@@ -93,6 +114,7 @@
 			this.tableAdapterManager.assembl_gas_equiptTableAdapter = null;
 			this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
 			this.tableAdapterManager.component_componyTableAdapter = null;
+			this.tableAdapterManager.craftitemsreportTableAdapter = null;
 			this.tableAdapterManager.gas_component_admissionTableAdapter = null;
 			this.tableAdapterManager.gas_componentTableAdapter = this.gas_componentTableAdapter;
 			this.tableAdapterManager.gas_equiptTableAdapter = this.gas_equiptTableAdapter;
@@ -122,7 +144,7 @@
             this.dataGridViewTextBoxColumn4});
 			this.gas_equiptDataGridView.DataSource = this.gas_equiptBindingSource;
 			this.gas_equiptDataGridView.EnableHeadersVisualStyles = false;
-			this.gas_equiptDataGridView.Location = new System.Drawing.Point(3, 40);
+			this.gas_equiptDataGridView.Location = new System.Drawing.Point(12, 49);
 			this.gas_equiptDataGridView.Margin = new System.Windows.Forms.Padding(2);
 			this.gas_equiptDataGridView.Name = "gas_equiptDataGridView";
 			this.gas_equiptDataGridView.ReadOnly = true;
@@ -239,7 +261,7 @@
 			this.button1.Name = "button1";
 			this.button1.Size = new System.Drawing.Size(336, 64);
 			this.button1.TabIndex = 2;
-			this.button1.Text = "Создать";
+			this.button1.Text = "Собрать";
 			this.button1.UseVisualStyleBackColor = true;
 			this.button1.Click += new System.EventHandler(this.Button1_Click);
 			// 
@@ -370,10 +392,143 @@
 			// 
 			this.assembl_gas_equiptTableAdapter.ClearBeforeFill = true;
 			// 
+			// craftItemsReportBindingSource
+			// 
+			this.craftItemsReportBindingSource.DataMember = "CraftItemsReport";
+			this.craftItemsReportBindingSource.DataSource = this.gazmechDataSet;
+			// 
+			// craftItemsReportDataGridView
+			// 
+			this.craftItemsReportDataGridView.AutoGenerateColumns = false;
+			this.craftItemsReportDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			this.craftItemsReportDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn14,
+            this.dataGridViewTextBoxColumn15,
+            this.dataGridViewTextBoxColumn16,
+            this.dataGridViewTextBoxColumn17,
+            this.dataGridViewTextBoxColumn18,
+            this.dataGridViewTextBoxColumn19,
+            this.craftdate});
+			this.craftItemsReportDataGridView.DataSource = this.craftItemsReportBindingSource;
+			this.craftItemsReportDataGridView.Location = new System.Drawing.Point(201, 387);
+			this.craftItemsReportDataGridView.Name = "craftItemsReportDataGridView";
+			this.craftItemsReportDataGridView.Size = new System.Drawing.Size(10, 10);
+			this.craftItemsReportDataGridView.TabIndex = 10;
+			this.craftItemsReportDataGridView.Visible = false;
+			// 
+			// dataGridViewTextBoxColumn14
+			// 
+			this.dataGridViewTextBoxColumn14.DataPropertyName = "idcip";
+			this.dataGridViewTextBoxColumn14.HeaderText = "idcip";
+			this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
+			// 
+			// dataGridViewTextBoxColumn15
+			// 
+			this.dataGridViewTextBoxColumn15.DataPropertyName = "Compon";
+			this.dataGridViewTextBoxColumn15.HeaderText = "Compon";
+			this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
+			// 
+			// dataGridViewTextBoxColumn16
+			// 
+			this.dataGridViewTextBoxColumn16.DataPropertyName = "Equipt";
+			this.dataGridViewTextBoxColumn16.HeaderText = "Equipt";
+			this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
+			// 
+			// dataGridViewTextBoxColumn17
+			// 
+			this.dataGridViewTextBoxColumn17.DataPropertyName = "idComp";
+			this.dataGridViewTextBoxColumn17.HeaderText = "idComp";
+			this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
+			// 
+			// dataGridViewTextBoxColumn18
+			// 
+			this.dataGridViewTextBoxColumn18.DataPropertyName = "idEquip";
+			this.dataGridViewTextBoxColumn18.HeaderText = "idEquip";
+			this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
+			// 
+			// dataGridViewTextBoxColumn19
+			// 
+			this.dataGridViewTextBoxColumn19.DataPropertyName = "count";
+			this.dataGridViewTextBoxColumn19.HeaderText = "count";
+			this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
+			// 
+			// craftdate
+			// 
+			this.craftdate.DataPropertyName = "craftdate";
+			this.craftdate.HeaderText = "craftdate";
+			this.craftdate.Name = "craftdate";
+			// 
+			// craftitemsreportTableAdapter
+			// 
+			this.craftitemsreportTableAdapter.ClearBeforeFill = true;
+			// 
+			// craftitemsreportDataGridView1
+			// 
+			this.craftitemsreportDataGridView1.AutoGenerateColumns = false;
+			this.craftitemsreportDataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			this.craftitemsreportDataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn20,
+            this.dataGridViewTextBoxColumn21,
+            this.dataGridViewTextBoxColumn22,
+            this.dataGridViewTextBoxColumn23,
+            this.dataGridViewTextBoxColumn24,
+            this.dataGridViewTextBoxColumn25,
+            this.dataGridViewTextBoxColumn26});
+			this.craftitemsreportDataGridView1.DataSource = this.craftItemsReportBindingSource;
+			this.craftitemsreportDataGridView1.Location = new System.Drawing.Point(228, 387);
+			this.craftitemsreportDataGridView1.Name = "craftitemsreportDataGridView1";
+			this.craftitemsreportDataGridView1.Size = new System.Drawing.Size(10, 10);
+			this.craftitemsreportDataGridView1.TabIndex = 11;
+			this.craftitemsreportDataGridView1.Visible = false;
+			// 
+			// dataGridViewTextBoxColumn20
+			// 
+			this.dataGridViewTextBoxColumn20.DataPropertyName = "idcip";
+			this.dataGridViewTextBoxColumn20.HeaderText = "idcip";
+			this.dataGridViewTextBoxColumn20.Name = "dataGridViewTextBoxColumn20";
+			// 
+			// dataGridViewTextBoxColumn21
+			// 
+			this.dataGridViewTextBoxColumn21.DataPropertyName = "Compon";
+			this.dataGridViewTextBoxColumn21.HeaderText = "Compon";
+			this.dataGridViewTextBoxColumn21.Name = "dataGridViewTextBoxColumn21";
+			// 
+			// dataGridViewTextBoxColumn22
+			// 
+			this.dataGridViewTextBoxColumn22.DataPropertyName = "Equipt";
+			this.dataGridViewTextBoxColumn22.HeaderText = "Equipt";
+			this.dataGridViewTextBoxColumn22.Name = "dataGridViewTextBoxColumn22";
+			// 
+			// dataGridViewTextBoxColumn23
+			// 
+			this.dataGridViewTextBoxColumn23.DataPropertyName = "idComp";
+			this.dataGridViewTextBoxColumn23.HeaderText = "idComp";
+			this.dataGridViewTextBoxColumn23.Name = "dataGridViewTextBoxColumn23";
+			// 
+			// dataGridViewTextBoxColumn24
+			// 
+			this.dataGridViewTextBoxColumn24.DataPropertyName = "idEquip";
+			this.dataGridViewTextBoxColumn24.HeaderText = "idEquip";
+			this.dataGridViewTextBoxColumn24.Name = "dataGridViewTextBoxColumn24";
+			// 
+			// dataGridViewTextBoxColumn25
+			// 
+			this.dataGridViewTextBoxColumn25.DataPropertyName = "count";
+			this.dataGridViewTextBoxColumn25.HeaderText = "count";
+			this.dataGridViewTextBoxColumn25.Name = "dataGridViewTextBoxColumn25";
+			// 
+			// dataGridViewTextBoxColumn26
+			// 
+			this.dataGridViewTextBoxColumn26.DataPropertyName = "craftdate";
+			this.dataGridViewTextBoxColumn26.HeaderText = "craftdate";
+			this.dataGridViewTextBoxColumn26.Name = "dataGridViewTextBoxColumn26";
+			// 
 			// EquiptPostavk
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.Controls.Add(this.craftitemsreportDataGridView1);
+			this.Controls.Add(this.craftItemsReportDataGridView);
 			this.Controls.Add(this.dateTimePicker1);
 			this.Controls.Add(this.label4);
 			this.Controls.Add(this.label3);
@@ -386,8 +541,9 @@
 			this.Controls.Add(this.gas_equiptDataGridView);
 			this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
 			this.Margin = new System.Windows.Forms.Padding(5);
+			this.MinimumSize = new System.Drawing.Size(921, 665);
 			this.Name = "EquiptPostavk";
-			this.Size = new System.Drawing.Size(921, 665);
+			this.Size = new System.Drawing.Size(938, 682);
 			this.Load += new System.EventHandler(this.EquiptPostavk_Load);
 			this.VisibleChanged += new System.EventHandler(this.EquiptPostavk_VisibleChanged);
 			((System.ComponentModel.ISupportInitialize)(this.gazmechDataSet)).EndInit();
@@ -399,6 +555,9 @@
 			((System.ComponentModel.ISupportInitialize)(this.gas_componentDataGridView)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.assembl_gas_equiptBindingSource)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.craftItemsReportBindingSource)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.craftItemsReportDataGridView)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.craftitemsreportDataGridView1)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -440,5 +599,23 @@
 		private System.Windows.Forms.DateTimePicker dateTimePicker1;
 		private System.Windows.Forms.BindingSource assembl_gas_equiptBindingSource;
 		private gazmechDataSetTableAdapters.assembl_gas_equiptTableAdapter assembl_gas_equiptTableAdapter;
+		private System.Windows.Forms.BindingSource craftItemsReportBindingSource;
+		private System.Windows.Forms.DataGridView craftItemsReportDataGridView;
+		private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
+		private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
+		private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
+		private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn17;
+		private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn18;
+		private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn19;
+		private System.Windows.Forms.DataGridViewTextBoxColumn craftdate;
+		private gazmechDataSetTableAdapters.craftitemsreportTableAdapter craftitemsreportTableAdapter;
+		private System.Windows.Forms.DataGridView craftitemsreportDataGridView1;
+		private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn20;
+		private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn21;
+		private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn22;
+		private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn23;
+		private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn24;
+		private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn25;
+		private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn26;
 	}
 }

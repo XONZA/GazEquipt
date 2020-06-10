@@ -48,11 +48,11 @@
 			this.gas_componentTableAdapter = new GasEquipt.gazmechDataSetTableAdapters.gas_componentTableAdapter();
 			this.gas_reciptTableAdapter = new GasEquipt.gazmechDataSetTableAdapters.gas_reciptTableAdapter();
 			this.gas_reciptBindingSource = new System.Windows.Forms.BindingSource(this.components);
-			this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			((System.ComponentModel.ISupportInitialize)(this.gas_componentDataGridView)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.gas_componentBindingSource)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.gazmechDataSet)).BeginInit();
@@ -96,11 +96,11 @@
 			this.gas_componentDataGridView.AutoGenerateColumns = false;
 			this.gas_componentDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.gas_componentDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5});
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn1});
 			this.gas_componentDataGridView.DataSource = this.gas_componentBindingSource;
 			this.gas_componentDataGridView.EnableHeadersVisualStyles = false;
 			this.gas_componentDataGridView.Location = new System.Drawing.Point(298, 0);
@@ -204,6 +204,7 @@
 			this.tableAdapterManager.assembl_gas_equiptTableAdapter = null;
 			this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
 			this.tableAdapterManager.component_componyTableAdapter = null;
+			this.tableAdapterManager.craftitemsreportTableAdapter = null;
 			this.tableAdapterManager.gas_component_admissionTableAdapter = null;
 			this.tableAdapterManager.gas_componentTableAdapter = this.gas_componentTableAdapter;
 			this.tableAdapterManager.gas_equiptTableAdapter = this.gas_equiptTableAdapter;
@@ -223,14 +224,6 @@
 			// 
 			this.gas_reciptBindingSource.DataMember = "gas_recipt";
 			this.gas_reciptBindingSource.DataSource = this.gazmechDataSet;
-			// 
-			// dataGridViewTextBoxColumn1
-			// 
-			this.dataGridViewTextBoxColumn1.DataPropertyName = "idgas_component";
-			this.dataGridViewTextBoxColumn1.HeaderText = "idgas_component";
-			this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-			this.dataGridViewTextBoxColumn1.ReadOnly = true;
-			this.dataGridViewTextBoxColumn1.Visible = false;
 			// 
 			// dataGridViewTextBoxColumn2
 			// 
@@ -264,6 +257,14 @@
 			this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
 			this.dataGridViewTextBoxColumn5.ReadOnly = true;
 			this.dataGridViewTextBoxColumn5.Visible = false;
+			// 
+			// dataGridViewTextBoxColumn1
+			// 
+			this.dataGridViewTextBoxColumn1.DataPropertyName = "idgas_component";
+			this.dataGridViewTextBoxColumn1.HeaderText = "idgas_component";
+			this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+			this.dataGridViewTextBoxColumn1.ReadOnly = true;
+			this.dataGridViewTextBoxColumn1.Visible = false;
 			// 
 			// EquiptAdd
 			// 
@@ -319,10 +320,10 @@
 		private System.Windows.Forms.Button button2;
 		private System.Windows.Forms.Panel panel1;
 		private System.Windows.Forms.TextBox gq_coastTextBox;
-		private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
 		private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
 		private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
 		private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
 		private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+		private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
 	}
 }
